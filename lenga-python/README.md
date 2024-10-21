@@ -1,4 +1,4 @@
-Antes de iniciar:
+Instalar
 pip install pandas
 pip install openpyxl
 pip install matplotlib openpyxl
