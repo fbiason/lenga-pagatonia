@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Equipo 7 - Lenga Patagonia</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Your description" />
+    <meta name="keywords" content="Your keywords" />
+    <meta name="author" content="Your name" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="css/bootstrap.css"
+      type="text/css"
+      media="screen"
+    />
+    <link
+      rel="stylesheet"
+      href="css/bootstrap-responsive.css"
+      type="text/css"
+      media="screen"
+    />
+    <link
+      rel="stylesheet"
+      href="css/supersized.core.css"
+      type="text/css"
+      media="screen"
+    />
+    <link
+      rel="stylesheet"
+      href="css/style.css"
+      type="text/css"
+      media="screen"
+    />
+    <link
+      rel="stylesheet"
+      href="css/camera.css"
+      type="text/css"
+      media="screen"
+    />
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="js/superfish.js"></script>
+
+    <script type="text/javascript" src="js/supersized.core.3.2.1.js"></script>
+
+    <script type="text/javascript" src="js/camera.js"></script>
+    <script
+      type="text/javascript"
+      src="js/jquery.mobile.customized.min.js"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        /////// icons
+        //$(".social li").find("a").css({opacity:0.6});
+        $(".social li a").hover(
+          function () {
+            $(this).stop().animate({ opacity: 0.6 }, 400, "easeOutExpo");
+          },
+          function () {
+            $(this).stop().animate({ opacity: 1 }, 400, "easeOutExpo");
+          }
+        );
+
+        // camera
+        $("#camera_wrap").camera({
+          //thumbnails: true
+          height: "270",
+          hover: false,
+          loader: "none",
+          navigation: true,
+          pagination: false,
+          navigationHover: false,
+          mobileNavHover: false,
+          playPause: false,
+          pauseOnClick: false,
+          time: 7000,
+          transPeriod: 1500,
+        });
+      }); //
+      $(window).load(function () {
+        //
+      }); //
+    </script>
+  </head>
+
+  <body class="subpage">
+    <!-- Scroll to Top Button -->
+    <a href="#" id="scroll-to-top" title="Back to Top">
+      <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script>
+      // Mostrar el botón de "Scroll to Top" cuando el usuario haga scroll hacia abajo
+      window.onscroll = function () {
+        var scrollTopButton = document.getElementById("scroll-to-top");
+        if (
+          document.body.scrollTop > 200 ||
+          document.documentElement.scrollTop > 200
+        ) {
+          scrollTopButton.style.display = "block"; // Mostrar el botón
+        } else {
+          scrollTopButton.style.display = "none"; // Ocultar el botón
+        }
+      };
+
+      // Funcionalidad del botón
+      document
+        .getElementById("scroll-to-top")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth", // Efecto de desplazamiento suave
+          });
+        });
+    </script>
+
+    <div id="main">
+      <header>
+        <div class="container">
+          <div class="row">
+            <div class="span12">
+              <div class="header_inner clearfix">
+                <div class="top1">
+                  <a href="index.html" class="logo"
+                    >EQUIPO 7 - <span>LENGA PATAGONIA</span></a
+                  >
+                </div>
+                <div class="logo-lenga">
+                  <img src="images/logo-lenga.png" alt="Lenga Patagonia Logo" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div id="navigation" class="container">
+        <div class="row">
+          <div class="span12">
+            <ul class="menu menu1 row sf-menu clearfix">
+              <li class="nav1 span3">
+                <a href="team.html"
+                  ><span class="over1"></span><span class="over2"></span
+                  ><span class="ic1"><i class="fas fa-users"></i></span
+                  ><span class="txt1">01 - Equipo y Empresa</span></a
+                >
+              </li>
+              <li class="nav2 span3">
+                <a href="objetivos.html"
+                  ><span class="over1"></span><span class="over2"></span
+                  ><span class="ic1"><i class="fas fa-bullseye"></i></span
+                  ><span class="txt1">01 - Objetivos</span></a
+                >
+              </li>
+              <li class="nav3 span3">
+                <a href="herramientas.html"
+                  ><span class="over1"></span><span class="over2"></span
+                  ><span class="ic1"><i class="fas fa-tools"></i></span
+                  ><span class="txt1"><p>03 - Sprint 1</p></span
+                  ><span class="txt2">Herramientas</span></a
+                >
+              </li>
+              <li class="active nav4 span3">
+                <a href="diccionario.html"
+                  ><span class="over1"></span><span class="over2"></span
+                  ><span class="ic1"><i class="fas fa-database"></i></span
+                  ><span class="txt1"><p>04- Sprint 1</p></span
+                  ><span class="txt2"
+                    >Diccionario y Análisis exploratorio</span
+                  ></a
+                >
+              </li>
+            </ul>
+
+            <div class="slider_wrapper">
+              <div class="row">
+                <div class="span3">
+                  <div class="logo2">
+                    <a href="index.html"
+                      ><img
+                        class="logo-politecnico"
+                        src="images/politecnico.jpg"
+                        alt=""
+                    /></a>
+                  </div>
+                </div>
+                <div class="span9">
+                  <div id="slider" class="clearfix">
+                    <div id="camera_wrap">
+                      <div data-src="images/datos1.webp"></div>
+                      <div data-src="images/datos2.webp"></div>
+                      <div data-src="images/datos3.webp"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ul class="menu menu2 row sf-menu clearfix">
+              <li class="nav5 span3 sub-menu sub-menu-1">
+                <a href="etl.html"
+                  ><span class="over1"></span><span class="over2"></span
+                  ><span class="ic1"><i class="fas fa-exchange-alt"></i></span
+                  ><span class="txt1"><p>05 - Sprint 2</p></span
+                  ><span class="txt2"
+                    >Combinación de Datos y Proceso ETL</span
+                  ></a
+                >
+              </li>
+              <li class="nav6 span3 sub-menu sub-menu-1">
+                <a href="datos-trabajo.html"
+                  ><span class="over1"></span><span class="over2"></span
+                  ><span class="ic1"><i class="fas fa-chart-bar"></i></span
+                  ><span class="txt1"><p>06 - Sprint 2</p></span
+                  ><span class="txt2">Datos de trabajo y Visualización</span></a
+                >
+              </li>
+
+              <li class="nav7 span3 sub-menu sub-menu-1">
+                <a href="hallazgos.html"
+                  ><span class="over1"></span><span class="over2"></span
+                  ><span class="ic1"><i class="fas fa-check-circle"></i></span
+                  ><span class="txt1"><p>07 - Sprint 3</p></span
+                  ><span class="txt2"
+                    >Hallazgos y Evaluación de resultados</span
+                  ></a
+                >
+              </li>
+              <li class="nav8 span3">
+                <a href="conclusion.html"
+                  ><span class="over1"></span><span class="over2"></span
+                  ><span class="ic1"><i class="fas fa-flag-checkered"></i></span
+                  ><span class="txt1"><p>08 - Conclusión</p></span></a
+                >
+              </li>
+            </ul>
+            <div class="hl1"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="diccionario-section container">
+        <h2 class="section-title">Diccionario de Datos</h2>
+        <p class="txt-diccionario">
+          El Diccionario de Datos es una referencia esencial que detalla las
+          columnas clave presentes en el conjunto de datos utilizados por el
+          equipo. Este diccionario fue elaborado a partir del análisis inicial
+          de los datos proporcionados por Lenga Patagonia S.A., específicamente
+          relacionado con la volumetría de los canchones y las características
+          de las muestras de madera. La información contenida en este
+          diccionario nos permitió identificar y estructurar los datos
+          necesarios para los análisis posteriores, asegurando que todas las
+          columnas y sus valores fueran consistentes y útiles para el proyecto.
+        </p>
+        <div class="table-container">
+          <table class="diccionario-table">
+            <thead>
+              <tr>
+                <th>Campo</th>
+                <th>Tipo</th>
+                <th>Tamaño</th>
+                <th>Descripción</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Fecha</td>
+                <td>DATE</td>
+                <td>10</td>
+                <td>Fecha de inicio de la muestra.</td>
+              </tr>
+              <tr>
+                <td>Área</td>
+                <td>VARCHAR</td>
+                <td>15</td>
+                <td>Zona de extracción de la materia prima.</td>
+              </tr>
+              <tr>
+                <td>Cantidad de Rollizos</td>
+                <td>INT</td>
+                <td>6</td>
+                <td>Cantidad de rollizos extraídos.</td>
+              </tr>
+              <tr>
+                <td>Largo (cm)</td>
+                <td>INT</td>
+                <td>5</td>
+                <td>Largo de cada rollizo en centímetros.</td>
+              </tr>
+              <tr>
+                <td>Diámetro (cm)</td>
+                <td>INT</td>
+                <td>5</td>
+                <td>Diámetro de la cara 1 del rollizo.</td>
+              </tr>
+              <tr>
+                <td>Diámetro 2 (cm)</td>
+                <td>INT</td>
+                <td>5</td>
+                <td>Diámetro de la cara 2 del rollizo (si aplica).</td>
+              </tr>
+              <tr>
+                <td>Calidad de Troza</td>
+                <td>VARCHAR</td>
+                <td>120</td>
+                <td>Calidad de la troza clasificada según normas (A, B, C).</td>
+              </tr>
+              <tr>
+                <td>_id</td>
+                <td>INT (foreign key)</td>
+                <td>6</td>
+                <td>
+                  Código interno de extracción vinculado a procesos previos.
+                </td>
+              </tr>
+              <tr>
+                <td>_index</td>
+                <td>INT (primary key)</td>
+                <td>10</td>
+                <td>Identificador único de la muestra o proceso.</td>
+              </tr>
+              <tr>
+                <td>_parent_index</td>
+                <td>INT (foreign key)</td>
+                <td>5</td>
+                <td>Identificador de referencia vinculado al proceso padre.</td>
+              </tr>
+              <tr>
+                <td>_submission__id</td>
+                <td>INT (foreign key)</td>
+                <td>10</td>
+                <td>
+                  Identificador interno relacionado a la carga de la muestra.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 class="section-title">Análisis Exploratorio</h2>
+        <p class="txt-diccionario">
+          Durante el análisis exploratorio, realizamos dos partes. La primera,
+          al recepcionar los datos por primera vez, y la segunda, luego de
+          reunirnos con el propietario de la empresa.
+        </p>
+<div class="analisis-parts">
+  <!-- Primera Parte -->
+  <h3 class="toggle-header">Primera Parte</h3>
+  <div class="toggle-content">
+    <p class="txt-diccionario">
+      En esta etapa, encontramos diversas inconsistencias en los datos,
+      especialmente en la columna "Área", donde se identificaron entradas
+      incorrectas como nombres de personas o patentes en lugar de áreas de
+      extracción.
+    </p>
+  </div>
+
+  <!-- Segunda Parte -->
+  <h3 class="toggle-header">Segunda Parte</h3>
+  <div class="toggle-content">
+    <p class="txt-diccionario">
+      Después de la reunión con la empresa, profundizamos en los procesos
+      y pudimos aclarar algunas dudas. Tomamos decisiones clave sobre qué
+      columnas eliminar y cómo transformar los datos para optimizar el
+      análisis posterior.
+    </p>
+  </div>
+</div>
+
+      </div>
+
+      <div class="copyright">Copyright © 2024. Lic. Franco Biason</div>
+    </div>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
