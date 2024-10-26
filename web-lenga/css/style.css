@@ -133,13 +133,16 @@ header {
   float: left;
 }
 .menu > li > a {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 220px;
   height: 220px;
   text-decoration: none;
-  overflow: hidden;
   position: relative;
 }
+
 .menu > li > a .over1 {
   display: block;
   width: 100%;
@@ -176,40 +179,56 @@ header {
   width: 100%;
   height: 100%;
   position: absolute;
-  left: 0;
   top: 0;
+  left: 0;
   z-index: 3;
+  border-radius: 2rem;
+  font-size: 3rem; /* Asegúrate de que el tamaño del ícono sea adecuado */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  /* Sombra inicial */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3), 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+
+/* Efecto hover */
+.menu > li > a:hover .ic1 {
+  transform: scale(1.1); /* Escala el ícono */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4), 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+  color: #b2f5b1; /* Cambia el color del ícono en hover */
+}
+
+/* Efecto "pulsante" en hover para darle más dinamismo */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.menu > li > a:hover .ic1 i {
+  animation: pulse 0.6s ease infinite;
+}
+
 .menu > li > a .txt1 {
-  display: inline-block;
-  text-decoration: none;
   font-family: "Calibri";
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
-  color: #fff;
-  position: absolute;
-  left: 10px;
-  bottom: 50px;
+  color: #ffffff;
   z-index: 4;
-  opacity: 0.4;
-  filter: alpha(opacity=40);
+  margin-top: 10rem;
 }
 .menu > li > a .txt2 {
-  display: inline-block;
-  text-decoration: none;
   font-family: "Calibri";
   font-weight: 400;
-  font-size: 14px;
-  line-height: 14px;
-  color: #fff;
-  position: absolute;
-  left: 5px;
-  justify-content: center;
-  bottom: 10px;
-  padding: 0.5rem;
-  z-index: 5;
+  font-size: 18px;
+  color: #ffffff;
   text-transform: uppercase;
+  text-align: center;
+  margin: 0; 
+  z-index: 4;
 }
 .menu > li > a:hover .over2,
 .menu > li.active > a .over2,
@@ -246,9 +265,9 @@ header {
 
 
 .menu .ic1 i {
-    font-size: 4rem; 
-    margin-bottom: 10px; 
-    display: flex;
+  font-size: 4rem; 
+   margin-bottom: 10px; 
+  display: flex;
 	justify-content: center;
 	text-align: center;
 }
@@ -354,7 +373,6 @@ h3 {
   font-size: 22px;
   color: #fff;
   line-height: 30px;
-  padding: 25px 0 25px 0;
   margin: 0;
 }
 
@@ -448,17 +466,6 @@ h6 {
 .date1.last {
   padding-bottom: 0px;
 }
-.date1 .txt1 {
-  float: left;
-  width: 70px;
-  padding-right: 10px;
-  font-family: "Calibri";
-  font-weight: 400;
-  color: #348fe8;
-  font-size: 28px;
-  line-height: 28px;
-  text-transform: uppercase;
-}
 .date1 .txt1 span {
   font-size: 14px;
 }
@@ -522,7 +529,6 @@ h6 {
   float: left;
   width: 25px;
   height: 25px;
-  background: #3497f4;
   text-align: center;
   margin-right: 15px;
   font-family: "Calibri";
@@ -1179,17 +1185,7 @@ body::before {
   display: flex;
   justify-content: center; 
   gap: -30px;
-    transform: translateX(-130px);
 }
-
-.team-container2 {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  z-index: 2;
-  transform: translateX(130px) translateY(-580px);
-}
-
 
 .thumbnail-team {
   text-align: center;
@@ -1198,8 +1194,19 @@ body::before {
 }
 
 .img-member {
-  width: 850px;
+  width: 400px;
   height: auto;
+}
+
+.img-member {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  filter: grayscale(40%); /* Efecto de escala de grises */
+  cursor: pointer;
+}
+
+.img-member:hover {
+  transform: scale(1.1); /* Efecto de agrandamiento en hover */
+  filter: grayscale(0%); /* Restablece los colores en hover */
 }
 
 @media (max-width: 768px) {
