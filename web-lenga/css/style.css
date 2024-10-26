@@ -56,7 +56,7 @@ header {
 
 .top1 {
   float: left;
-  font-family: "Titillium Web";
+  font-family: "Calibri";
   font-weight: 700;
   font-size: 30px;
   line-height: 30px;
@@ -183,7 +183,7 @@ header {
 .menu > li > a .txt1 {
   display: inline-block;
   text-decoration: none;
-  font-family: "Open Sans";
+  font-family: "Calibri";
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
@@ -198,7 +198,7 @@ header {
 .menu > li > a .txt2 {
   display: inline-block;
   text-decoration: none;
-  font-family: "Open Sans";
+  font-family: "Calibri";
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
@@ -277,7 +277,7 @@ header {
 .sub-menu li a {
   display: block;
   position: relative;
-  font-family: "Hervetic";
+  font-family: "Calibri";
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
@@ -325,7 +325,7 @@ header {
 
 /* ============================= main layout ====================== */
 h1 {
-  font-family: "Hervetic";
+  font-family: "Calibri";
   font-weight: 400;
   font-size: 26px;
   color: #fff;
@@ -339,7 +339,7 @@ h1 span {
   line-height: 14px;
 }
 h2 {
-  font-family: "Hervetic";
+  font-family: "Calibri";
   font-weight: 400;
   font-size: 24px;
   color: #fff;
@@ -349,7 +349,7 @@ h2 {
   text-transform: uppercase;
 }
 h3 {
-  font-family: "Hervetic";
+  font-family: "Calibri";
   font-weight: 400;
   font-size: 22px;
   color: #fff;
@@ -359,7 +359,7 @@ h3 {
 }
 
 h4 {
-  font-family: "Open Sans";
+  font-family: "Calibri";
   font-weight: 400;
   color: #fff;
   padding: 0px 0 10px 0;
@@ -380,7 +380,7 @@ h5 {
 }
 
 h6 {
-  font-family: "Open Sans";
+  font-family: "Calibri";
   font-weight: 400;
   font-style: italic;
   font-size: 16px;
@@ -422,7 +422,7 @@ h6 {
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: 12px;
-  font-family: "Open Sans";
+  font-family: "Calibri";
   font-weight: 400;
   color: #cedae5;
   text-transform: uppercase;
@@ -452,7 +452,7 @@ h6 {
   float: left;
   width: 70px;
   padding-right: 10px;
-  font-family: "Hervetic";
+  font-family: "Calibri";
   font-weight: 400;
   color: #348fe8;
   font-size: 28px;
@@ -473,7 +473,7 @@ h6 {
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: 12px;
-  font-family: "Open Sans";
+  font-family: "Calibri";
   font-weight: 400;
   color: #135099;
   white-space: nowrap;
@@ -525,7 +525,7 @@ h6 {
   background: #3497f4;
   text-align: center;
   margin-right: 15px;
-  font-family: "Hervetic";
+  font-family: "Calibri";
   font-weight: 400;
   color: #fff;
   font-size: 14px;
@@ -1083,15 +1083,17 @@ h6 {
 }
 
 /* ===== CÓDIGOS PERSONALIZADOS =====*/
+/*INDEX*/
+
 /* ===== GENERAL =====*/
 
 body {
-  background-image: url('../images/bg.jpeg');
+  background-image: url('../images/bg3.jpg');
   background-size: cover;
   background-position: center;
   opacity: 2; 
   border: 0;
-  font: 12px Arial, Helvetica, sans-serif;
+  font: 12px Arial, sans-serif;
   color: #020a14;
   line-height: 18px;
   min-width: 320px;
@@ -1489,8 +1491,8 @@ body::before {
 }
 
 .analisis-part h3::before {
-  content: "\f1c9"; /* Ícono de análisis */
-  font-family: FontAwesome;
+  content: "\f1c9"; 
+  font-family: "Calibri";
   margin-right: 10px;
   font-size: 1.5rem;
   color: #a6e22e;

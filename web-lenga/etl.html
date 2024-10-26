@@ -10,6 +10,10 @@
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
 
+    
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css">
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -195,11 +199,9 @@
                 <div class="span9">
                   <div id="slider" class="clearfix">
                     <div id="camera_wrap">
-                      <div data-src="images/lenga-1.jpeg"></div>
-                      <div data-src="images/lenga-2.jpeg"></div>
-                      <div data-src="images/lenga-3.jpeg"></div>
-                      <div data-src="images/lenga-4.jpeg"></div>
-                      <div data-src="images/lenga-5.jpeg"></div>
+                      <div data-src="images/etl1.webp"></div>
+                      <div data-src="images/etl2.webp"></div>
+                      <div data-src="images/etl3.webp"></div>
                     </div>
                   </div>
                 </div>
@@ -248,14 +250,14 @@
         </div>
       </div>
 
-<section class="etl-section">
-  <h2 class="section-title">Proceso ETL</h2>
-  <p class="etl-description">
-    El proceso ETL (Extracción, Transformación y Carga) realizado en el proyecto con Lenga Patagonia S.A. permitió integrar y preparar datos clave para los análisis de calidad de la madera. A través de la extracción de registros de producción, su limpieza y normalización, y la carga en un sistema de reportes interactivos, este proceso facilita la toma de decisiones estratégicas en la gestión forestal.
-  </p>
-  <button class="report-button">Ver reporte trimestral</button>
-</section>
-
+   <section class="etl-section">
+        <h2 class="section-title">Proceso ETL</h2>
+        <p class="etl-description">
+            El proceso ETL (Extracción, Transformación y Carga) realizado en el proyecto con Lenga Patagonia S.A. permitió integrar y preparar datos clave para los análisis de calidad de la madera. A través de la extracción de registros de producción, su limpieza y normalización, y la carga en un sistema de reportes interactivos, este proceso facilita la toma de decisiones estratégicas en la gestión forestal.
+        </p>
+        <!-- Botón que ejecuta el código de PyScript -->
+  <button id="report-button" class="report-button">Ver reporte trimestral</button>
+    </section>
 
       <div class="line1"></div>
 
@@ -264,6 +266,5 @@
     </div>
     <script type="text/javascript" src="js/bootstrap.js"></script>
     <script src="js/main.js"></script>
-
   </body>
 </html>
