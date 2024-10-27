@@ -72,7 +72,6 @@
 
         // camera
         $("#camera_wrap").camera({
-          //thumbnails: true
           height: "270",
           hover: false,
           loader: "none",
@@ -82,8 +81,8 @@
           mobileNavHover: false,
           playPause: false,
           pauseOnClick: false,
-          time: 7000,
-          transPeriod: 1500,
+          time: 100,
+          transPeriod: 1000,
         });
       }); //
       $(window).load(function () {
@@ -194,11 +193,9 @@
                 <div class="span9">
                   <div id="slider" class="clearfix">
                     <div id="camera_wrap">
-                      <div data-src="images/lenga-1.jpeg"></div>
-                      <div data-src="images/lenga-2.jpeg"></div>
-                      <div data-src="images/lenga-3.jpeg"></div>
-                      <div data-src="images/lenga-4.jpeg"></div>
-                      <div data-src="images/lenga-5.jpeg"></div>
+                      <div data-src="images/visualizacion1.jpg"></div>
+                      <div data-src="images/visualizacion2.jpg"></div>
+                      <div data-src="images/visualizacion3.jpg"></div>
                     </div>
                   </div>
                 </div>
@@ -220,7 +217,7 @@
                   ><span class="over1"></span><span class="over2"></span
                   ><span class="ic1"><i class="fas fa-chart-bar"></i></span
                   ><span class="txt1"><p>06 - Sprint 2</p></span
-                  ><span class="txt2">Visualización y Datos de trabajo</span></a
+                  ><span class="txt2">Datos de trabajo y Visualizacion</span></a
                 >
               </li>
 
@@ -246,6 +243,17 @@
           </div>
         </div>
       </div>
+
+      <section class="data-work">
+            <h1 class="section-title">Datos de trabajo</h1>
+
+      </section>
+
+      <section class="visualizacion">
+            <h1 class="section-title">Visualización</h1>
+            <div class="powerbi">
+<iframe title="etl_lenga" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=c2e48397-0869-4097-a09b-45f724d2e918&autoAuth=true&ctid=0ee139a8-c97c-4904-bde9-5680be0898e4" frameborder="0" allowFullScreen="true"></iframe></div>
+      </section>
 
       <div class="line1"></div>
        <div class="copyright">Copyright © 2024. Centro Politécnico Malvinas Argentinas</div>
