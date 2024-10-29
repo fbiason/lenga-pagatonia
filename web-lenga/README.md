@@ -7,3 +7,6 @@ pip show pandas
 Como ejecutar el gráfico:
 1. .venv\Scripts\activate
 2. python lenga.py
+
+
+Ejecutar: python app.py antes de iniciar
