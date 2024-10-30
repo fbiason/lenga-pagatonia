@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generar Reporte</title>
+</head>
+<body>
+    <h1>Generar Reporte de Calidad Trimestral</h1>
+    <form action="{% url 'generar_reporte' %}" method="get">
+        <button type="submit">Generar Reporte</button>
+    </form>
+
+    {% if grafico_url %}
+        <h2>Gráfico de Calidad Trimestral</h2>
+        <img src="{{ grafico_url }}" alt="Gráfico de Calidad Trimestral">
+    {% endif %}
+</body>
+</html>
