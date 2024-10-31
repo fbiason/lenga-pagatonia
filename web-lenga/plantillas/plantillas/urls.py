@@ -6,7 +6,7 @@ import os
 
 urlpatterns = [
     path('generar-reporte/', views.generar_reporte, name='generar_reporte'),
-    path('dinamico/', views.dinamico, name='dinamico'),
+    path('etl/', views.etl, name='etl'),
 ]
 
 if settings.DEBUG:

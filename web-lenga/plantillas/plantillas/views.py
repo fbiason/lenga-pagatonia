@@ -5,8 +5,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from django.conf import settings
 
-def dinamico(request):
-    return render(request, 'dinamico.html')  # Renderiza el archivo HTML
+def etl(request):
+    return render(request, 'etl.html')  # Renderiza el archivo HTML
 
 def generar_reporte(request):
     # Ruta completa al archivo Excel dentro de la carpeta "data"
@@ -52,7 +52,7 @@ def generar_reporte(request):
         plt.close()  # Cierra el gráfico para liberar memoria
 
         # Pasar la ruta del gráfico a la plantilla para mostrarlo
-        return render(request, 'dinamico.html', {'grafico_url': '/data/grafico_calidad_trimestral.png'})
+        return render(request, 'etl.html', {'grafico_url': '/data/grafico_calidad_trimestral.png'})
 
     except Exception as e:
         # Si ocurre un error, devolver un mensaje de error

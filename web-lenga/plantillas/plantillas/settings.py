@@ -112,21 +112,17 @@ USE_I18N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# Configuración de la URL de archivos estáticos
+# https://docs.djangoproject.com/en/5.1/howto/static-files/
+
 STATIC_URL = '/static/'
 
-# Configuración de las rutas de archivos estáticos
 STATICFILES_DIRS = [
+    BASE_DIR / "static", '/var/www/static',
     BASE_DIR / "css",
     BASE_DIR / "js",
     BASE_DIR / "images",
-        BASE_DIR / "data",
+    BASE_DIR / "data",
 ]
-
-# https://docs.djangoproject.com/en/5.1/howto/static-files/
-
-STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
