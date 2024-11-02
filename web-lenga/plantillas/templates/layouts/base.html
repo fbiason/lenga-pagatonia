@@ -1,0 +1,13 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+{% include 'layouts/partials/head.html' %}
+<body>
+ {% include 'layouts/partials/header.html' %}
+ {% include 'layouts/partials/menu.html' %}
+<section>
+    {% block content %}{% endblock %}
+</section>
+{% include 'layouts/partials/footer.html' %}
+</body>
+</html>

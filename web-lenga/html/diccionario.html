@@ -17,14 +17,6 @@
 
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
-
-    <!-- Bootstrap CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-
-    <link
-      rel="stylesheet"
       href="css/bootstrap.css"
       type="text/css"
       media="screen"
@@ -80,6 +72,7 @@
 
         // camera
         $("#camera_wrap").camera({
+          //thumbnails: true
           height: "270",
           hover: false,
           loader: "none",
@@ -134,27 +127,28 @@
 
     <div id="main">
       <header>
-<div class="container">
-  <div class="row">
-    <div class="span12">
-      <div class="header_inner clearfix">
-        <div class="top1">
-          <a href="index.html" class="logo">EQUIPO 7 - <span>LENGA PATAGONIA</span></a>
+        <div class="container">
+          <div class="row">
+            <div class="span12">
+              <div class="header_inner clearfix">
+                <div class="top1">
+                  <a href="index.html" class="logo"
+                    >EQUIPO 7 - <span>LENGA PATAGONIA</span></a
+                  >
+                </div>
+                <div class="logo-lenga">
+                  <img src="images/logo-lenga.png" alt="Lenga Patagonia Logo" />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="logo-lenga">
-          <img src="images/logo-lenga.png" alt="Lenga Patagonia Logo" />
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
       </header>
       <div id="navigation" class="container">
         <div class="row">
           <div class="span12">
             <ul class="menu menu1 row sf-menu clearfix">
-              <li class="active nav1 span3">
+              <li class="nav1 span3">
                 <a href="team.html"
                   ><span class="over1"></span><span class="over2"></span
                   ><span class="ic1"><i class="fas fa-users"></i></span
@@ -176,7 +170,7 @@
                   ><span class="txt2">Herramientas</span></a
                 >
               </li>
-              <li class="nav4 span3">
+              <li class="active nav4 span3">
                 <a href="diccionario.html"
                   ><span class="over1"></span><span class="over2"></span
                   ><span class="ic1"><i class="fas fa-database"></i></span
@@ -203,9 +197,9 @@
                 <div class="span9">
                   <div id="slider" class="clearfix">
                     <div id="camera_wrap">
-                      <div data-src="images/team1.jpeg"></div>
-                      <div data-src="images//team2.jpeg"></div>
-                      <div data-src="images//team3.jpeg"></div>
+                      <div data-src="images/diccionario1.jpeg"></div>
+                      <div data-src="images/diccionario2.jpg"></div>
+                      <div data-src="images/diccionario3.jpg"></div>
                     </div>
                   </div>
                 </div>
@@ -227,7 +221,7 @@
                   ><span class="over1"></span><span class="over2"></span
                   ><span class="ic1"><i class="fas fa-chart-bar"></i></span
                   ><span class="txt1"><p>Sprint 2</p></span
-                  ><span class="txt2">Datos de trabajo y Visualizacion</span></a
+                  ><span class="txt2">Datos de trabajo y Visualización</span></a
                 >
               </li>
 
@@ -249,105 +243,146 @@
                 >
               </li>
             </ul>
-               <div class="line1"></div>
+            <div class="hl1"></div>
           </div>
         </div>
       </div>
 
-      <div id="content">
-        <div class="container">
-          <div class="row">
-            <div class="team-section">
-              <h1>Sobre la empresa</h1>
-              <div class="thumb2">
-                <div class="thumbnail clearfix">
-                  <figure>
-                    <img class="img-team" src="images/lenga.png" alt="" />
-                  </figure>
-                  <div class="caption">
-                    <h2>Lenga Patagonia S.A.</h2>
-                    <p class="txt-team">
-                      Lenga Patagonia S.A. es una destacada empresa forestal de
-                      la región de Tierra del Fuego, Argentina, que administra
-                      50,000 hectáreas de bosques propios. Su actividad
-                      principal es la explotación sostenible de la lenga, una
-                      madera semidura muy valorada por su versatilidad,
-                      durabilidad y propiedades estéticas, la cual se utiliza en
-                      la fabricación de muebles, pisos, puertas, ventanas, entre
-                      otros productos de alta calidad.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="line1"></div>
-              <h1>Prácticas Profesionalizantes</h1>
-              <div class="thumb2">
-                <div class="thumbnail clearfix">
-                  <figure>
-                    <img class="img-team" src="images/equipo-7.jpeg" alt="" />
-                  </figure>
-                  <div class="caption">
-                    <h2>Equipo 7</h2>
-                    <p class="txt-team">
-                      El presente proyecto se enfoca en el análisis de datos
-                      proporcionados por la empresa Lenga Patagonia S.A., una
-                      organización dedicada a la explotación forestal sostenible
-                      en Tierra del Fuego. Utilizando diversas herramientas de
-                      análisis de datos, se implementará un proceso de ETL
-                      (Extracción, Transformación y Carga) con el objetivo de
-                      integrar y preparar la información de producción de la
-                      empresa para su posterior análisis.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="line1"></div>
+      <section class="diccionario-section container">
+        <h2 class="section-title">Diccionario de Datos</h2>
+        <p class="txt-diccionario">
+          El Diccionario de Datos es una referencia esencial que detalla las
+          columnas clave presentes en el conjunto de datos utilizados por el
+          equipo. Este diccionario fue elaborado a partir del análisis inicial
+          de los datos proporcionados por Lenga Patagonia S.A., específicamente
+          relacionado con la volumetría de los canchones y las características
+          de las muestras de madera. La información contenida en este
+          diccionario nos permitió identificar y estructurar los datos
+          necesarios para los análisis posteriores, asegurando que todas las
+          columnas y sus valores fueran consistentes y útiles para el proyecto.
+        </p>
+        <div class="table-container">
+          <table class="diccionario-table">
+            <thead>
+              <tr>
+                <th>Campo</th>
+                <th>Tipo</th>
+                <th>Tamaño</th>
+                <th>Descripción</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Fecha</td>
+                <td>DATE</td>
+                <td>10</td>
+                <td>Fecha de inicio de la muestra.</td>
+              </tr>
+              <tr>
+                <td>Área</td>
+                <td>VARCHAR</td>
+                <td>15</td>
+                <td>Zona de extracción de la materia prima.</td>
+              </tr>
+              <tr>
+                <td>Cantidad de Rollizos</td>
+                <td>INT</td>
+                <td>6</td>
+                <td>Cantidad de rollizos extraídos.</td>
+              </tr>
+              <tr>
+                <td>Largo (cm)</td>
+                <td>INT</td>
+                <td>5</td>
+                <td>Largo de cada rollizo en centímetros.</td>
+              </tr>
+              <tr>
+                <td>Diámetro (cm)</td>
+                <td>INT</td>
+                <td>5</td>
+                <td>Diámetro de la cara 1 del rollizo.</td>
+              </tr>
+              <tr>
+                <td>Diámetro 2 (cm)</td>
+                <td>INT</td>
+                <td>5</td>
+                <td>Diámetro de la cara 2 del rollizo (si aplica).</td>
+              </tr>
+              <tr>
+                <td>Calidad de Troza</td>
+                <td>VARCHAR</td>
+                <td>120</td>
+                <td>Calidad de la troza clasificada según normas (A, B, C).</td>
+              </tr>
+              <tr>
+                <td>_id</td>
+                <td>INT (foreign key)</td>
+                <td>6</td>
+                <td>
+                  Código interno de extracción vinculado a procesos previos.
+                </td>
+              </tr>
+              <tr>
+                <td>_index</td>
+                <td>INT (primary key)</td>
+                <td>10</td>
+                <td>Identificador único de la muestra o proceso.</td>
+              </tr>
+              <tr>
+                <td>_parent_index</td>
+                <td>INT (foreign key)</td>
+                <td>5</td>
+                <td>Identificador de referencia vinculado al proceso padre.</td>
+              </tr>
+              <tr>
+                <td>_submission__id</td>
+                <td>INT (foreign key)</td>
+                <td>10</td>
+                <td>
+                  Identificador interno relacionado a la carga de la muestra.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-<section class="members-team">
-  <h1>Miembros</h1>
-  <div class="team-container">
-    <div class="thumbnail-team">
-      <img
-        class="img-member"
-        src="images/biason.png"
-        alt="Biason Franco"
-      />
-    </div>
-    <div class="thumbnail-team">
-      <img
-        class="img-member"
-        src="images/lapa.png"
-        alt="Lapa Gustavo"
-      />
-    </div>
-    <div class="thumbnail-team">
-      <img
-        class="img-member"
-        src="images/perez.png"
-        alt="Perez Enzo"
-      />
-    </div>
-
-    <div class="thumbnail-team">
-      <img
-        class="img-member"
-        src="images/cuevas.png"
-        alt="Cuevas Daniela"
-      />
-    </div>
+        <h2 class="section-title">Análisis Exploratorio</h2>
+        <p class="txt-diccionario">
+          Durante el análisis exploratorio, realizamos dos partes. La primera,
+          al recepcionar los datos por primera vez, y la segunda, luego de
+          reunirnos con el propietario de la empresa.
+        </p>
+<div class="analisis-parts">
+  <!-- Primera Parte -->
+  <h3 class="toggle-header">Primera Parte</h3>
+  <div class="toggle-content">
+    <p class="txt-diccionario">
+      En esta etapa, encontramos diversas inconsistencias en los datos,
+      especialmente en la columna "Área", donde se identificaron entradas
+      incorrectas como nombres de personas o patentes en lugar de áreas de
+      extracción.
+    </p>
   </div>
-</section>
+
+  <!-- Segunda Parte -->
+  <h3 class="toggle-header">Segunda Parte</h3>
+  <div class="toggle-content">
+    <p class="txt-diccionario">
+      Después de la reunión con la empresa, profundizamos en los procesos
+      y pudimos aclarar algunas dudas. Tomamos decisiones clave sobre qué
+      columnas eliminar y cómo transformar los datos para optimizar el
+      análisis posterior.
+    </p>
+  </div>
+</div>
+
+      </section>
 
 
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="line1"></div>
-       <div class="copyright">Copyright © 2024. Centro Politécnico Malvinas Argentinas</div>
+       <div class="line1"></div>
+      <div class="copyright">Copyright © 2024. Centro Politécnico Malvinas Argentinas</div>
     </div>
     <script type="text/javascript" src="js/bootstrap.js"></script>
     <script src="js/main.js"></script>
-
   </body>
 </html>

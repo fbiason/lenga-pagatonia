@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+{% include 'layouts/partials/head.html' %}
+  <body>
+    <section id="main" class="subpage">
+ {% include 'layouts/partials/header.html' %}
+ {% include 'layouts/partials/menu.html' %}
+<section id="main" class="subpage">
+    <section class="team">
+        <div id="content">
+            <div class="container">
+                <div class="row">
+                    <div class="team-section">
+                        <h1>Sobre la empresa</h1>
+                        <div class="thumb2">
+                            <div class="thumbnail clearfix">
+                                <figure>
+                                    <img class="img-team" src="{% static 'images/lenga.png' %}" alt="Lenga Patagonia" />
+                                </figure>
+                                <div class="caption">
+                                    <h2>Lenga Patagonia S.A.</h2>
+                                    <p class="txt-team">
+                                        Lenga Patagonia S.A. es una destacada empresa forestal de la región de Tierra del Fuego, Argentina, que
+                                        administra 50,000 hectáreas de bosques propios. Su actividad principal es la explotación sostenible de la
+                                        lenga, una madera semidura muy valorada por su versatilidad, durabilidad y propiedades estéticas, la cual
+                                        se utiliza en la fabricación de muebles, pisos, puertas, ventanas, entre otros productos de alta calidad.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line1"></div>
+                        <h1>Prácticas Profesionalizantes</h1>
+                        <div class="thumb2">
+                            <div class="thumbnail clearfix">
+                                <figure>
+                                    <img class="img-team" src="{% static 'images/equipo-7.jpeg' %}" alt="Equipo 7" />
+                                </figure>
+                                <div class="caption">
+                                    <h2>Equipo 7</h2>
+                                    <p class="txt-team">
+                                        El presente proyecto se enfoca en el análisis de datos proporcionados por la empresa Lenga Patagonia S.A.,
+                                        una organización dedicada a la explotación forestal sostenible en Tierra del Fuego. Utilizando diversas
+                                        herramientas de análisis de datos, se implementará un proceso de ETL (Extracción, Transformación y Carga)
+                                        con el objetivo de integrar y preparar la información de producción de la empresa para su posterior análisis.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line1"></div>
+
+                        <section class="members-team">
+                            <h1>Miembros</h1>
+                            <div class="team-container">
+                                <div class="thumbnail-team">
+                                    <img class="img-member" src="{% static 'images/biason.png' %}" alt="Biason Franco" />
+                                </div>
+                                <div class="thumbnail-team">
+                                    <img class="img-member" src="{% static 'images/lapa.png' %}" alt="Lapa Gustavo" />
+                                </div>
+                                <div class="thumbnail-team">
+                                    <img class="img-member" src="{% static 'images/perez.png' %}" alt="Perez Enzo" />
+                                </div>
+                                <div class="thumbnail-team">
+                                    <img class="img-member" src="{% static 'images/cuevas.png' %}" alt="Cuevas Daniela" />
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  </body>
+</html>

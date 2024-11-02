@@ -1545,10 +1545,6 @@ body::before {
   line-height: 1.6;
 }
 
-.grafico-calidad {
-  padding-left: 4rem;
-}
-
 /* ===== Report Button ===== */
 .report-button {
   background-color: #2ca733;

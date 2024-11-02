@@ -5,8 +5,33 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from django.conf import settings
 
+#enlaces a otras páginas
+def index(request):
+    return render(request, 'index.html', {}) # Renderiza el archivo HTML
+
+def team(request):
+    return render(request, 'team.html', {})
+
+def goals(request):
+    return render(request, 'goals.html', {})
+
+def tools(request):
+    return render(request, 'tools.html', {})
+
+def  dictionary(request):
+    return render(request, 'dictionary.html', {})
+   
 def etl(request):
-    return render(request, 'etl.html')  # Renderiza el archivo HTML
+    return render(request, 'etl.html', {})  
+
+def datawork(request):
+    return render(request, 'datawork.html', {})   
+
+def findings(request):
+    return render(request, 'findings.html', {})     
+
+def conclusion(request):
+    return render(request, 'conclusion.html', {})     
 
 def generar_reporte(request):
     # Ruta completa al archivo Excel dentro de la carpeta "data"
@@ -57,3 +82,4 @@ def generar_reporte(request):
     except Exception as e:
         # Si ocurre un error, devolver un mensaje de error
         return HttpResponse(f"Error al generar el reporte: {e}")
+

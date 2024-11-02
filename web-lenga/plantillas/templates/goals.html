@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+{% include 'layouts/partials/head.html' %}
+  <body>
+    <section id="main" class="subpage">
+ {% include 'layouts/partials/header.html' %}
+  {% include 'layouts/partials/menu.html' %}
+    <section id="content">
+        <div class="container">
+            <div class="row">
+                <div class="obj-section">
+                    <h1 class="section-title">Objetivos del Proyecto</h1>
+                    <div class="thumb7">
+                        <div class="thumbnail clearfix">
+                            <figure>
+                                <img class="img-obj" src="{% static 'images/objetivos.webp' %}" alt="Objetivos del Proyecto" />
+                            </figure>
+                            <div class="caption">
+                                <h2>Objetivo General</h2>
+                                <p class="txt-obj">
+                                    Analizar los datos de producción proporcionados por Lenga Patagonia S.A. para evaluar la calidad de la madera
+                                    extraída en distintas temporadas y áreas de explotación, con el fin de identificar patrones de calidad que permitan
+                                    optimizar la gestión forestal y productiva.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="line1"></div>
+
+                    <h2>Objetivos Específicos</h2>
+
+                    <div class="accordion" id="accordion1">
+                        <div class="accordion-group">
+                            <div class="accordion-heading">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapse1">
+                                    Implementar un proceso de ETL
+                                </a>
+                            </div>
+                            <div id="collapse1" class="accordion-body collapse">
+                                <div class="accordion-inner txt-obj">
+                                    Integrar y limpiar los datos de producción, asegurando su calidad y usabilidad en los análisis. Este proceso es
+                                    clave para garantizar que la información proporcionada sea precisa y pueda ser utilizada para tomar decisiones
+                                    estratégicas.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-group">
+                            <div class="accordion-heading">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapse2">
+                                    Analizar la relación entre la calidad de la madera y las variables ambientales
+                                </a>
+                            </div>
+                            <div id="collapse2" class="accordion-body collapse">
+                                <div class="accordion-inner txt-obj">
+                                    Explorar la influencia de factores como la temporada y la ubicación geográfica de la extracción en la calidad de la
+                                    madera, con el fin de identificar patrones que permitan mejorar la producción.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-group">
+                            <div class="accordion-heading">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapse3">
+                                    Automatizar la generación de reportes
+                                </a>
+                            </div>
+                            <div id="collapse3" class="accordion-body collapse">
+                                <div class="accordion-inner txt-obj">
+                                    Crear reportes interactivos y automáticos en Power BI sobre el rendimiento y la calidad de la madera para facilitar
+                                    una toma de decisiones eficiente y basada en datos.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-group">
+                            <div class="accordion-heading">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapse4">
+                                    Identificar áreas de mejora en la cadena de suministro y gestión operativa
+                                </a>
+                            </div>
+                            <div id="collapse4" class="accordion-body collapse">
+                                <div class="accordion-inner txt-obj">
+                                    Utilizar análisis predictivos basados en patrones históricos de calidad de la madera para optimizar la cadena de
+                                    suministro y mejorar la gestión operativa de Lenga Patagonia S.A.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% include 'layouts/partials/footer.html' %}
+    </section>
+  </body>
+</html>

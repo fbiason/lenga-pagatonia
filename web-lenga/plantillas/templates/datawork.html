@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+{% include 'layouts/partials/head.html' %}
+  <body>
+    <section id="main" class="subpage">
+ {% include 'layouts/partials/header.html' %}
+
+ {% include 'layouts/partials/menu.html' %}
+
+
+      <!-- Sección de Datos de Trabajo -->
+      <section class="data-work">
+        <h1 class="section-title">Datos de Trabajo</h1>
+      </section>
+
+      <!-- Sección de Visualización -->
+      <section class="visualizacion">
+        <h1 class="section-title">Visualización</h1>
+        <div class="powerbi">
+          <iframe
+            title="ETL_SPRINT2"
+            width="1140"
+            height="541.25"
+            src="https://app.powerbi.com/reportEmbed?reportId=a4dfcb10-7569-4cc8-bd5c-4f04e1e1bf00&autoAuth=true&ctid=0ee139a8-c97c-4904-bde9-5680be0898e4"
+            frameborder="0"
+            allowFullScreen="true"
+          ></iframe>
+        </div>
+      </section>
+
+
+{% include 'layouts/partials/footer.html' %}
+    </section>
+  </body>
+</html>

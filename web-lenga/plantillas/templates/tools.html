@@ -1,0 +1,124 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  {% include 'layouts/partials/head.html' %}
+  <body>
+    <section id="main" class="subpage">
+      {% include 'layouts/partials/header.html' %} 
+      {% include 'layouts/partials/menu.html' %}
+
+      <section>
+        <h1 class="section-title">Herramientas de Trabajo</h1>
+        <div id="tools" class="container tools-section">
+          <div class="tool-card">
+            <div class="tool-logo">
+              <img
+                src="{% static 'images/power-bi.png' %}"
+                alt="Power BI"
+                class="tool-img"
+              />
+            </div>
+            <div class="txt-tools">
+              <h3 class="title-tools">Power BI</h3>
+              <p>
+                Permite crear visualizaciones interactivas y generar reportes
+                automáticos, facilitando la toma de decisiones estratégicas
+                basadas en datos procesados.
+              </p>
+            </div>
+          </div>
+
+          <div class="tool-card">
+            <div class="tool-logo">
+              <img
+                src="{% static 'images/python.png' %}"
+                alt="Python"
+                class="tool-img"
+              />
+            </div>
+            <div class="txt-tools">
+              <h3 class="title-tools">Python</h3>
+              <p>
+                Utilizado para desarrollar scripts de ETL, combinando tablas,
+                conversión de fechas y la creación de gráficos y reportes de
+                calidad de trozas.
+              </p>
+            </div>
+          </div>
+
+          <div class="tool-card">
+            <div class="tool-logo">
+              <img
+                src="{% static 'images/trello.png' %}"
+                alt="Trello"
+                class="tool-img"
+              />
+            </div>
+            <div class="txt-tools">
+              <h3 class="title-tools">Trello</h3>
+              <p>
+                Gestor de tareas que permite visualizar el estado de las tareas
+                en curso y asegurarse de que el equipo cumple con los plazos
+                establecidos.
+              </p>
+            </div>
+          </div>
+
+          <div class="tool-card">
+            <div class="tool-logo">
+              <img
+                src="{% static 'images/github.png' %}"
+                alt="GitHub"
+                class="tool-img"
+              />
+            </div>
+            <div class="txt-tools">
+              <h3 class="title-tools">GitHub</h3>
+              <p>
+                Utilizado para el control de versiones y colaboración en el
+                código fuente del proyecto, asegurando trazabilidad y control de
+                cambios.
+              </p>
+            </div>
+          </div>
+
+          <div class="tool-card">
+            <div class="tool-logo">
+              <img
+                src="{% static 'images/drive.webp' %}"
+                alt="Google Drive"
+                class="tool-img"
+              />
+            </div>
+            <div class="txt-tools">
+              <h3 class="title-tools">Google Drive</h3>
+              <p>
+                Almacenamiento y compartición de documentos clave del proyecto,
+                facilitando la colaboración en tiempo real.
+              </p>
+            </div>
+          </div>
+
+          <div class="tool-card">
+            <div class="tool-logo">
+              <img
+                src="{% static 'images/vsc.png' %}"
+                alt="VS Code"
+                class="tool-img"
+              />
+            </div>
+            <div class="txt-tools">
+              <h3 class="title-tools">Visual Studio Code</h3>
+              <p>
+                Entorno de desarrollo integrado utilizado para trabajar con
+                scripts de Python y colaborar mediante GitHub.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {% include 'layouts/partials/footer.html' %}
+    </section>
+  </body>
+</html>
