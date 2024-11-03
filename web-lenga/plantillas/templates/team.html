@@ -4,72 +4,174 @@
 {% include 'layouts/partials/head.html' %}
   <body>
     <section id="main" class="subpage">
- {% include 'layouts/partials/header.html' %}
- {% include 'layouts/partials/menu.html' %}
-<section id="main" class="subpage">
-    <section class="team">
-        <div id="content">
-            <div class="container">
-                <div class="row">
-                    <div class="team-section">
-                        <h1>Sobre la empresa</h1>
-                        <div class="thumb2">
-                            <div class="thumbnail clearfix">
-                                <figure>
-                                    <img class="img-team" src="{% static 'images/lenga.png' %}" alt="Lenga Patagonia" />
-                                </figure>
-                                <div class="caption">
-                                    <h2>Lenga Patagonia S.A.</h2>
-                                    <p class="txt-team">
-                                        Lenga Patagonia S.A. es una destacada empresa forestal de la región de Tierra del Fuego, Argentina, que
-                                        administra 50,000 hectáreas de bosques propios. Su actividad principal es la explotación sostenible de la
-                                        lenga, una madera semidura muy valorada por su versatilidad, durabilidad y propiedades estéticas, la cual
-                                        se utiliza en la fabricación de muebles, pisos, puertas, ventanas, entre otros productos de alta calidad.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="line1"></div>
-                        <h1>Prácticas Profesionalizantes</h1>
-                        <div class="thumb2">
-                            <div class="thumbnail clearfix">
-                                <figure>
-                                    <img class="img-team" src="{% static 'images/equipo-7.jpeg' %}" alt="Equipo 7" />
-                                </figure>
-                                <div class="caption">
-                                    <h2>Equipo 7</h2>
-                                    <p class="txt-team">
-                                        El presente proyecto se enfoca en el análisis de datos proporcionados por la empresa Lenga Patagonia S.A.,
-                                        una organización dedicada a la explotación forestal sostenible en Tierra del Fuego. Utilizando diversas
-                                        herramientas de análisis de datos, se implementará un proceso de ETL (Extracción, Transformación y Carga)
-                                        con el objetivo de integrar y preparar la información de producción de la empresa para su posterior análisis.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="line1"></div>
+        {% include 'layouts/partials/header.html' %}
 
-                        <section class="members-team">
-                            <h1>Miembros</h1>
-                            <div class="team-container">
-                                <div class="thumbnail-team">
-                                    <img class="img-member" src="{% static 'images/biason.png' %}" alt="Biason Franco" />
+        {% block menu %}
+        <section class="menu">
+            <div id="navigation" class="container">
+                <div class="row">
+                    <div class="span12">
+                        <ul class="menu menu1 row sf-menu clearfix">
+                            <li class="nav1 active span3">
+                                <a href="{% url 'team' %}">
+                                    <span class="over1"></span><span class="over2"></span>
+                                    <span class="ic1"><i class="fas fa-users"></i></span>
+                                    <span class="txt1">Equipo y Empresa</span>
+                                </a>
+                            </li>
+                            <li class="nav2 span3">
+                                <a href="{% url 'goals' %}">
+                                    <span class="over1"></span><span class="over2"></span>
+                                    <span class="ic1"><i class="fas fa-bullseye"></i></span>
+                                    <span class="txt1">Objetivos</span>
+                                </a>
+                            </li>
+                            <li class="nav3 span3">
+                                <a href="{% url 'tools' %}">
+                                    <span class="over1"></span><span class="over2"></span>
+                                    <span class="ic1"><i class="fas fa-tools"></i></span>
+                                    <span class="txt1"><p>Sprint 1</p></span>
+                                    <span class="txt2">Herramientas</span>
+                                </a>
+                            </li>
+                            <li class="nav4 span3">
+                                <a href="{% url 'dictionary' %}">
+                                    <span class="over1"></span><span class="over2"></span>
+                                    <span class="ic1"><i class="fas fa-database"></i></span>
+                                    <span class="txt1"><p>Sprint 1</p></span>
+                                    <span class="txt2">Diccionario y Análisis exploratorio</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <div class="slider_wrapper">
+                            <div class="row">
+                                <div class="span3">
+                                    <div class="logo2">
+                                        <a>
+                                            <img class="logo-politecnico" src="{% static 'images/politecnico.jpg' %}" alt="Politécnico Logo">
+                                        </a>
+                                    </div>
                                 </div>
-                                <div class="thumbnail-team">
-                                    <img class="img-member" src="{% static 'images/lapa.png' %}" alt="Lapa Gustavo" />
-                                </div>
-                                <div class="thumbnail-team">
-                                    <img class="img-member" src="{% static 'images/perez.png' %}" alt="Perez Enzo" />
-                                </div>
-                                <div class="thumbnail-team">
-                                    <img class="img-member" src="{% static 'images/cuevas.png' %}" alt="Cuevas Daniela" />
+                                <div class="span9">
+                                    <div id="slider" class="clearfix">
+                                        <div id="camera_wrap">
+                                            <div data-src="{% static 'images/team1.jpeg' %}"></div>
+                                            <div data-src="{% static 'images/team2.jpeg' %}"></div>
+                                            <div data-src="{% static 'images/team3.jpeg' %}"></div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </section>
+                        </div>
+                        <!-- Fin de la personalización del slider -->
+
+                        {% block menu2 %}
+                        <ul class="menu menu2 row sf-menu clearfix">
+                            <li class="nav5 span3 sub-menu sub-menu-1">
+                                <a href="{% url 'etl' %}">
+                                    <span class="over1"></span><span class="over2"></span>
+                                    <span class="ic1"><i class="fas fa-exchange-alt"></i></span>
+                                    <span class="txt1"><p>Sprint 2</p></span>
+                                    <span class="txt2">Combinación de Datos y Proceso ETL</span>
+                                </a>
+                            </li>
+                            <li class="nav6 span3 sub-menu sub-menu-1">
+                                <a href="{% url 'datawork' %}">
+                                    <span class="over1"></span><span class="over2"></span>
+                                    <span class="ic1"><i class="fas fa-chart-bar"></i></span>
+                                    <span class="txt1"><p>Sprint 2</p></span>
+                                    <span class="txt2">Datos de trabajo y Visualización</span>
+                                </a>
+                            </li>
+                            <li class="nav7 span3 sub-menu sub-menu-1">
+                                <a href="{% url 'findings' %}">
+                                    <span class="over1"></span><span class="over2"></span>
+                                    <span class="ic1"><i class="fas fa-check-circle"></i></span>
+                                    <span class="txt1"><p>Sprint 3</p></span>
+                                    <span class="txt2">Hallazgos y Evaluación de resultados</span>
+                                </a>
+                            </li>
+                            <li class="nav8 span3">
+                                <a href="{% url 'conclusion' %}">
+                                    <span class="over1"></span><span class="over2"></span>
+                                    <span class="ic1"><i class="fas fa-flag-checkered"></i></span>
+                                    <span class="txt1"><p>Conclusión</p></span>
+                                </a>
+                            </li>
+                        </ul>
+                        {% endblock menu2 %}
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+        {% endblock menu %}
+
+        <section class="team">
+            <div id="content">
+                <div class="container">
+                    <div class="row">
+                        <div class="team-section">
+                            <h1>Sobre la empresa</h1>
+                            <div class="thumb2">
+                                <div class="thumbnail clearfix">
+                                    <figure>
+                                        <img class="img-team" src="{% static 'images/lenga.png' %}" alt="Lenga Patagonia" />
+                                    </figure>
+                                    <div class="caption">
+                                        <h2>Lenga Patagonia S.A.</h2>
+                                        <p class="txt-team">
+                                            Lenga Patagonia S.A. es una destacada empresa forestal de la región de Tierra del Fuego, Argentina, que
+                                            administra 50,000 hectáreas de bosques propios. Su actividad principal es la explotación sostenible de la
+                                            lenga, una madera semidura muy valorada por su versatilidad, durabilidad y propiedades estéticas, la cual
+                                            se utiliza en la fabricación de muebles, pisos, puertas, ventanas, entre otros productos de alta calidad.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="line1"></div>
+                            <h1>Prácticas Profesionalizantes</h1>
+                            <div class="thumb2">
+                                <div class="thumbnail clearfix">
+                                    <figure>
+                                        <img class="img-team" src="{% static 'images/equipo-7.jpeg' %}" alt="Equipo 7" />
+                                    </figure>
+                                    <div class="caption">
+                                        <h2>Equipo 7</h2>
+                                        <p class="txt-team">
+                                            El presente proyecto se enfoca en el análisis de datos proporcionados por la empresa Lenga Patagonia S.A.,
+                                            una organización dedicada a la explotación forestal sostenible en Tierra del Fuego. Utilizando diversas
+                                            herramientas de análisis de datos, se implementará un proceso de ETL (Extracción, Transformación y Carga)
+                                            con el objetivo de integrar y preparar la información de producción de la empresa para su posterior análisis.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="line1"></div>
+
+                            <section class="members-team">
+                                <h1>Miembros</h1>
+                                <div class="team-container">
+                                    <div class="thumbnail-team">
+                                        <img class="img-member" src="{% static 'images/biason.png' %}" alt="Biason Franco" />
+                                    </div>
+                                    <div class="thumbnail-team">
+                                        <img class="img-member" src="{% static 'images/lapa.png' %}" alt="Lapa Gustavo" />
+                                    </div>
+                                    <div class="thumbnail-team">
+                                        <img class="img-member" src="{% static 'images/perez.png' %}" alt="Perez Enzo" />
+                                    </div>
+                                    <div class="thumbnail-team">
+                                        <img class="img-member" src="{% static 'images/cuevas.png' %}" alt="Cuevas Daniela" />
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+            {% include 'layouts/partials/footer.html' %}
     </section>
   </body>
 </html>

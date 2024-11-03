@@ -4,117 +4,112 @@
   {% include 'layouts/partials/head.html' %}
   <body>
     <section id="main" class="subpage">
-      {% include 'layouts/partials/header.html' %} 
-      {% include 'layouts/partials/menu.html' %}
+      {% include 'layouts/partials/header.html' %}
+
+      <section class="menu">
+        <div id="navigation" class="container">
+          <div class="row">
+            <div class="span12">
+              <ul class="menu menu1 row sf-menu clearfix">
+                <li class="nav1 span3">
+                  <a href="{% url 'team' %}">
+                    <span class="over1"></span><span class="over2"></span>
+                    <span class="ic1"><i class="fas fa-users"></i></span>
+                    <span class="txt1">Equipo y Empresa</span>
+                  </a>
+                </li>
+                <li class="nav2 span3">
+                  <a href="{% url 'goals' %}">
+                    <span class="over1"></span><span class="over2"></span>
+                    <span class="ic1"><i class="fas fa-bullseye"></i></span>
+                    <span class="txt1">Objetivos</span>
+                  </a>
+                </li>
+                <li class="nav3 active span3">
+                  <a href="{% url 'tools' %}">
+                    <span class="over1"></span><span class="over2"></span>
+                    <span class="ic1"><i class="fas fa-tools"></i></span>
+                    <span class="txt1"><p>Sprint 1</p></span>
+                    <span class="txt2">Herramientas</span>
+                  </a>
+                </li>
+                <li class="nav4 span3">
+                  <a href="{% url 'dictionary' %}">
+                    <span class="over1"></span><span class="over2"></span>
+                    <span class="ic1"><i class="fas fa-database"></i></span>
+                    <span class="txt1"><p>Sprint 1</p></span>
+                    <span class="txt2">Diccionario y Análisis exploratorio</span>
+                  </a>
+                </li>
+              </ul>
+
+              <!-- Bloque de slider personalizado para tools.html -->
+              <div class="slider_wrapper">
+                <div class="row">
+                  <div class="span3">
+                    <div class="logo2">
+                      <a href="/">
+                        <img class="logo-politecnico" src="{% static 'images/politecnico.jpg' %}" alt="Politécnico Logo">
+                      </a>
+                    </div>
+                  </div>
+                  <div class="span9">
+                    <div id="slider" class="clearfix">
+                      <div id="camera_wrap">
+                        <div data-src="{% static 'images/tools1.jpeg' %}"></div>
+                        <div data-src="{% static 'images/tools2.jpeg' %}"></div>
+                        <div data-src="{% static 'images/tools3.jpeg' %}"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Fin del bloque de slider personalizado -->
+
+              {% block menu2 %}
+              <ul class="menu menu2 row sf-menu clearfix">
+                <li class="nav5 span3 sub-menu sub-menu-1">
+                  <a href="{% url 'etl' %}">
+                    <span class="over1"></span><span class="over2"></span>
+                    <span class="ic1"><i class="fas fa-exchange-alt"></i></span>
+                    <span class="txt1"><p>Sprint 2</p></span>
+                    <span class="txt2">Combinación de Datos y Proceso ETL</span>
+                  </a>
+                </li>
+                <li class="nav6 span3 sub-menu sub-menu-1">
+                  <a href="{% url 'datawork' %}">
+                    <span class="over1"></span><span class="over2"></span>
+                    <span class="ic1"><i class="fas fa-chart-bar"></i></span>
+                    <span class="txt1"><p>Sprint 2</p></span>
+                    <span class="txt2">Datos de trabajo y Visualización</span>
+                  </a>
+                </li>
+                <li class="nav7 span3 sub-menu sub-menu-1">
+                  <a href="{% url 'findings' %}">
+                    <span class="over1"></span><span class="over2"></span>
+                    <span class="ic1"><i class="fas fa-check-circle"></i></span>
+                    <span class="txt1"><p>Sprint 3</p></span>
+                    <span class="txt2">Hallazgos y Evaluación de resultados</span>
+                  </a>
+                </li>
+                <li class="nav8 span3">
+                  <a href="{% url 'conclusion' %}">
+                    <span class="over1"></span><span class="over2"></span>
+                    <span class="ic1"><i class="fas fa-flag-checkered"></i></span>
+                    <span class="txt1"><p>Conclusión</p></span>
+                  </a>
+                </li>
+              </ul>
+              {% endblock menu2 %}
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section>
         <h1 class="section-title">Herramientas de Trabajo</h1>
         <div id="tools" class="container tools-section">
-          <div class="tool-card">
-            <div class="tool-logo">
-              <img
-                src="{% static 'images/power-bi.png' %}"
-                alt="Power BI"
-                class="tool-img"
-              />
-            </div>
-            <div class="txt-tools">
-              <h3 class="title-tools">Power BI</h3>
-              <p>
-                Permite crear visualizaciones interactivas y generar reportes
-                automáticos, facilitando la toma de decisiones estratégicas
-                basadas en datos procesados.
-              </p>
-            </div>
-          </div>
-
-          <div class="tool-card">
-            <div class="tool-logo">
-              <img
-                src="{% static 'images/python.png' %}"
-                alt="Python"
-                class="tool-img"
-              />
-            </div>
-            <div class="txt-tools">
-              <h3 class="title-tools">Python</h3>
-              <p>
-                Utilizado para desarrollar scripts de ETL, combinando tablas,
-                conversión de fechas y la creación de gráficos y reportes de
-                calidad de trozas.
-              </p>
-            </div>
-          </div>
-
-          <div class="tool-card">
-            <div class="tool-logo">
-              <img
-                src="{% static 'images/trello.png' %}"
-                alt="Trello"
-                class="tool-img"
-              />
-            </div>
-            <div class="txt-tools">
-              <h3 class="title-tools">Trello</h3>
-              <p>
-                Gestor de tareas que permite visualizar el estado de las tareas
-                en curso y asegurarse de que el equipo cumple con los plazos
-                establecidos.
-              </p>
-            </div>
-          </div>
-
-          <div class="tool-card">
-            <div class="tool-logo">
-              <img
-                src="{% static 'images/github.png' %}"
-                alt="GitHub"
-                class="tool-img"
-              />
-            </div>
-            <div class="txt-tools">
-              <h3 class="title-tools">GitHub</h3>
-              <p>
-                Utilizado para el control de versiones y colaboración en el
-                código fuente del proyecto, asegurando trazabilidad y control de
-                cambios.
-              </p>
-            </div>
-          </div>
-
-          <div class="tool-card">
-            <div class="tool-logo">
-              <img
-                src="{% static 'images/drive.webp' %}"
-                alt="Google Drive"
-                class="tool-img"
-              />
-            </div>
-            <div class="txt-tools">
-              <h3 class="title-tools">Google Drive</h3>
-              <p>
-                Almacenamiento y compartición de documentos clave del proyecto,
-                facilitando la colaboración en tiempo real.
-              </p>
-            </div>
-          </div>
-
-          <div class="tool-card">
-            <div class="tool-logo">
-              <img
-                src="{% static 'images/vsc.png' %}"
-                alt="VS Code"
-                class="tool-img"
-              />
-            </div>
-            <div class="txt-tools">
-              <h3 class="title-tools">Visual Studio Code</h3>
-              <p>
-                Entorno de desarrollo integrado utilizado para trabajar con
-                scripts de Python y colaborar mediante GitHub.
-              </p>
-            </div>
-          </div>
+          <!-- Contenido de la sección de herramientas -->
         </div>
       </section>
 

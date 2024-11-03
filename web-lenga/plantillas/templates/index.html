@@ -4,11 +4,23 @@
 {% include 'layouts/partials/head.html' %}
   <body>
     <section id="main" class="subpage">
- {% include 'layouts/partials/header.html' %}
+        {% include 'layouts/partials/header.html' %}
 
- {% include 'layouts/partials/menu.html' %}
+        <section class="menu">
+            <div id="navigation" class="container">
+                <div class="row">
+                    <div class="span12">
+                        {% include 'layouts/partials/menu.html' %}
+                    </div>
+                </div>
+            </div>
+        </section>
 
-{% include 'layouts/partials/footer.html' %}
+        {% block menu1 %}{% endblock %}
+        {% block slider %}{% endblock %}
+        {% block menu2 %}{% endblock %}
+
+        {% include 'layouts/partials/footer.html' %}
     </section>
   </body>
 </html>
