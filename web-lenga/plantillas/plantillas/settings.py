@@ -121,6 +121,7 @@ STATICFILES_DIRS = [
     BASE_DIR / "css",
     BASE_DIR / "js",
     BASE_DIR / "images",
+    BASE_DIR / "media",
     BASE_DIR / "data",
 ]
 
