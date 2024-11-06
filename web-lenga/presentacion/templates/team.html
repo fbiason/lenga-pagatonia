@@ -1,0 +1,366 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    {% include 'layouts/partials/head.html' %}
+  <body>
+    <section id="main" class="subpage">
+      {% include 'layouts/partials/header.html' %} {% block menu %}
+      <section class="menu">
+        <div id="navigation" class="container">
+          <div class="row">
+            <div class="span12">
+              <ul class="menu menu1 row sf-menu clearfix">
+                <li class="nav1 active span3">
+                  <a href="{% url 'team' %}">
+                    <span class="over1"></span><span class="over2"></span>
+                    <span class="ic1"><i class="fas fa-users"></i></span>
+                    <span class="txt1">Equipo y Empresa</span>
+                  </a>
+                </li>
+                <li class="nav2 span3">
+                  <a href="{% url 'goals' %}">
+                    <span class="over1"></span><span class="over2"></span>
+                    <span class="ic1"><i class="fas fa-bullseye"></i></span>
+                    <span class="txt1">Objetivos</span>
+                  </a>
+                </li>
+                <li class="nav3 span3">
+                  <a href="{% url 'tools' %}">
+                    <span class="over1"></span><span class="over2"></span>
+                    <span class="ic1"><i class="fas fa-tools"></i></span>
+                    <span class="txt1"><p>Sprint 1</p></span>
+                    <span class="txt2">Herramientas</span>
+                  </a>
+                </li>
+                <li class="nav4 span3">
+                  <a href="{% url 'dictionary' %}">
+                    <span class="over1"></span><span class="over2"></span>
+                    <span class="ic1"><i class="fas fa-database"></i></span>
+                    <span class="txt1"><p>Sprint 1</p></span>
+                    <span class="txt2"
+                      >Diccionario y Análisis exploratorio</span
+                    >
+                  </a>
+                </li>
+              </ul>
+            {% block slider %}
+              {% endblock slider %}
+              <!-- Fin de la personalización del slider -->
+
+              {% block menu2 %}
+              <ul class="menu menu2 row sf-menu clearfix">
+                <li class="nav5 span3 sub-menu sub-menu-1">
+                  <a href="{% url 'etl' %}">
+                    <span class="over1"></span><span class="over2"></span>
+                    <span class="ic1"><i class="fas fa-exchange-alt"></i></span>
+                    <span class="txt1"><p>Sprint 2</p></span>
+                    <span class="txt2">Combinación de Datos y Proceso ETL</span>
+                  </a>
+                </li>
+                <li class="nav6 span3 sub-menu sub-menu-1">
+                  <a href="{% url 'datawork' %}">
+                    <span class="over1"></span><span class="over2"></span>
+                    <span class="ic1"><i class="fas fa-chart-bar"></i></span>
+                    <span class="txt1"><p>Sprint 2</p></span>
+                    <span class="txt2">Datos de trabajo y Visualización</span>
+                  </a>
+                </li>
+                <li class="nav7 span3 sub-menu sub-menu-1">
+                  <a href="{% url 'findings' %}">
+                    <span class="over1"></span><span class="over2"></span>
+                    <span class="ic1"><i class="fas fa-check-circle"></i></span>
+                    <span class="txt1"><p>Sprint 3</p></span>
+                    <span class="txt2"
+                      >Hallazgos y Evaluación de resultados</span
+                    >
+                  </a>
+                </li>
+                <li class="nav8 span3">
+                  <a href="{% url 'conclusion' %}">
+                    <span class="over1"></span><span class="over2"></span>
+                    <span class="ic1"
+                      ><i class="fas fa-flag-checkered"></i
+                    ></span>
+                    <span class="txt1"><p>Conclusión</p></span>
+                  </a>
+                </li>
+              </ul>
+              {% endblock menu2 %}
+            </div>
+          </div>
+        </div>
+      </section>
+      {% endblock menu %}
+
+      <section class="team">
+        <div id="content">
+          <div class="container">
+            <div class="row">
+              <div class="team-section">
+                <h1>Prácticas Profesionalizantes</h1>
+                <div class="thumb2">
+                  <div class="thumbnail clearfix">
+                    <figure>
+                      <img
+                        class="img-team"
+                        src="{% static 'images/equipo-7.jpeg' %}"
+                        alt="Equipo 7"
+                      />
+                    </figure>
+                    <div class="caption">
+                      <h2>Equipo 7</h2>
+                      <p class="txt-team">
+                        El presente proyecto se enfoca en el análisis de datos
+                        proporcionados por la empresa Lenga Patagonia S.A., una
+                        organización dedicada a la explotación forestal
+                        sostenible en Tierra del Fuego. Utilizando diversas
+                        herramientas de análisis de datos, se implementará un
+                        proceso de ETL (Extracción, Transformación y Carga) con
+                        el objetivo de integrar y preparar la información de
+                        producción de la empresa para su posterior análisis.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="line1"></div>
+
+            <section class="members-team">
+                  <h1>Miembros</h1>
+                  <div class="team-container">
+                    <div class="thumbnail-team">
+                      <img
+                        class="img-member"
+                        src="{% static 'images/biason.png' %}"
+                        alt="Biason Franco"
+                      />
+                    </div>
+                    <div class="thumbnail-team">
+                      <img
+                        class="img-member"
+                        src="{% static 'images/lapa.png' %}"
+                        alt="Lapa Gustavo"
+                      />
+                    </div>
+                    <div class="thumbnail-team">
+                      <img
+                        class="img-member"
+                        src="{% static 'images/perez.png' %}"
+                        alt="Perez Enzo"
+                      />
+                    </div>
+                    <div class="thumbnail-team">
+                      <img
+                        class="img-member"
+                        src="{% static 'images/cuevas.png' %}"
+                        alt="Cuevas Daniela"
+                      />
+                    </div>
+                  </div>
+                </section>
+  <div class="line1"></div>
+
+<h1>Sobre la empresa</h1>
+<div class="company-accordion">
+    <div class="accordion-item">
+        <button class="accordion-button"><i class="fas fa-tree"></i> Plan de Manejo</button>     
+        <div class="accordion-content">
+            <p>
+                Lenga Patagonia S.A. opera bajo un plan de manejo sostenible autorizado, que garantiza la conservación de la biodiversidad. La empresa interviene en áreas específicas del bosque, seleccionadas cuidadosamente para minimizar el impacto ambiental y permitir la regeneración natural.
+            </p>
+        <div class="slider_wrapper">
+                <div class="row">
+                  <div class="span9">
+                    <div id="slider" class="clearfix">
+                      <div id="camera_wrap">
+                         <img src="{% static 'images/team1.jpeg' %}" alt="Imagen 1">
+                         <img src="{% static 'images/team2.jpeg' %}" alt="Imagen 2">
+                         <img src="{% static 'images/team3.jpeg' %}" alt="Imagen 3">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <button class="accordion-button"><i class="fas fa-leaf"></i> Impacto Ambiental</button>
+        <div class="accordion-content">
+            <p>
+                La empresa implementa prácticas de reforestación natural y mantiene la mitad del bosque en pie en cada zona intervenida. Esto asegura que el ecosistema se recupere y permite una intervención cada 20 años, preservando el equilibrio ambiental.
+            </p>
+           <div id="slider" class="clearfix">
+                      <div id="camera_wrap">
+                         <img src="{% static 'images/team1.jpeg' %}" alt="Imagen 1">
+                         <img src="{% static 'images/team2.jpeg' %}" alt="Imagen 2">
+                         <img src="{% static 'images/team3.jpeg' %}" alt="Imagen 3">
+                      </div>
+                    </div>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <button class="accordion-button"><i class="fas fa-industry"></i> Proceso de Industrialización</button>
+        <div class="accordion-content">
+            <p>
+                La madera pasa por un proceso de corte, canteado y secado controlado. Este proceso asegura la calidad estructural de los productos, preparándolos para los mercados internacionales y nacionales con estándares de alta calidad.
+            </p>
+          <div id="slider" class="clearfix">
+                      <div id="camera_wrap">
+                         <img src="{% static 'images/team1.jpeg' %}" alt="Imagen 1">
+                         <img src="{% static 'images/team2.jpeg' %}" alt="Imagen 2">
+                         <img src="{% static 'images/team3.jpeg' %}" alt="Imagen 3">
+                      </div>
+                    </div>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <button class="accordion-button"><i class="fas fa-recycle"></i> Gestión de Residuos</button>
+        <div class="accordion-content">
+            <p>
+                Lenga Patagonia utiliza subproductos y desechos para la creación de briquetas de biomasa y los dona para calefacción en comunidades locales, mostrando su compromiso con la sostenibilidad y el apoyo a la comunidad fueguina.
+            </p>
+            <div id="slider" class="clearfix">
+                      <div id="camera_wrap">
+                         <img src="{% static 'images/team1.jpeg' %}" alt="Imagen 1">
+                         <img src="{% static 'images/team2.jpeg' %}" alt="Imagen 2">
+                         <img src="{% static 'images/team3.jpeg' %}" alt="Imagen 3">
+                      </div>
+                    </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Estilos del acordeón */
+    .company-accordion {
+        width: 80%;
+        margin: auto;
+        background-color: #f4f4f0;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .accordion-item {
+        border-bottom: 1px solid #ddd;
+    }
+
+    .accordion-button {
+        width: 100%;
+        padding: 15px;
+        font-size: 1.5em;
+        text-align: left;
+        background-color: #8b5e3c; 
+        color: white;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        transition: background 0.3s ease;
+    }
+
+    .accordion-button i {
+        margin-right: 10px;
+    }
+
+    .accordion-button:hover {
+        background-color: #6d4a2e; /* Cambio de color al pasar el cursor */
+    }
+
+    .accordion-content {
+        overflow: hidden;
+        max-height: 0;
+        padding: 0 15px;
+        background-color: #cca683;
+        color: #333;
+        transition: max-height 0.5s ease, padding 0.5s ease;
+    }
+
+    .accordion-content.open {
+        padding: 15px;
+        max-height: 500px; /* Ajusta según la altura necesaria para mostrar el contenido */
+    }
+
+    .accordion-content p {
+        font-size: 1.2em;
+        line-height: 1.5;
+    }
+
+    /* Slider y centrar contenido */
+    .slider_wrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    #camera_wrap img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+</style>
+
+<script>
+    // Acordeón con transición suave
+    document.querySelectorAll('.accordion-button').forEach(button => {
+        button.addEventListener('click', () => {
+            const content = button.nextElementSibling;
+
+            button.classList.toggle('active');
+            content.classList.toggle('open'); // Agrega o quita la clase 'open' para la transición
+
+            // Ajusta la altura del contenido para activar la animación de transición
+            if (content.classList.contains('open')) {
+                content.style.maxHeight = content.scrollHeight + "px";
+            } else {
+                content.style.maxHeight = null;
+            }
+        });
+    });
+
+    $(document).ready(function () {
+        // Efecto hover en íconos sociales
+        $(".social li a").hover(
+            function () {
+                $(this).stop().animate({ opacity: 0.6 }, 400, "easeOutExpo");
+            },
+            function () {
+                $(this).stop().animate({ opacity: 1 }, 400, "easeOutExpo");
+            }
+        );
+
+      // camera
+        $("#camera_wrap").camera({
+          //thumbnails: true
+          height: "270",
+          hover: false,
+          loader: "none",
+          navigation: true,
+          pagination: false,
+          navigationHover: false,
+          mobileNavHover: false,
+          playPause: false,
+          pauseOnClick: false,
+          time: 100,
+          transPeriod: 1000,
+        });
+      }); //
+      $(window).load(function () {
+        //
+      });
+</script>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {% include 'layouts/partials/footer.html' %}
+    </section>
+  </body>
+</html>
