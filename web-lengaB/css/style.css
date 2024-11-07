@@ -605,7 +605,7 @@ h6 {
 }
 
 .thumb2 {
-  margin-bottom: 0px;
+  margin-bottom: 40px;
 }
 .thumb2.last {
   margin-bottom: 0px;
@@ -1782,15 +1782,13 @@ strong {
  .company-accordion {
         width: 80%;
         margin: auto;
-        background-color: #f4f4f0;
+        background-color: #f4f4f08e;
         border-radius: 10px;
+        padding: 1rem;
         overflow: hidden;
         box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
     }
 
-    .accordion-item {
-        border-bottom: 1px solid #ddd;
-    }
 
     .accordion-item-end {
     border-bottom: none;
@@ -1799,7 +1797,6 @@ strong {
 
     .accordion-button {
         width: 100%;
-        padding: 15px;
         font-size: 1.5em;
         text-align: left;
         background-color: #8b5e3c; 
@@ -1817,14 +1814,14 @@ strong {
     }
 
     .accordion-button:hover {
-        background-color: #6d4a2e; 
+        background-color: #593a20; 
     }
 
     .accordion-content {
         overflow: hidden;
         max-height: 0;
-        padding: 0 15px;
-        background-color: #cca683;
+        margin-bottom: 2rem;
+        background-color: #a6825f75;
         color: #333;
         transition: max-height 0.5s ease, padding 0.5s ease;
     }
