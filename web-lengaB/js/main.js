@@ -96,4 +96,9 @@ function generateReport() {
   }, 10); // Pequeña demora para que se aplique la transición
 }
 
-
+// Hallazgos
+document.querySelectorAll(".hallazgo-card").forEach((card) => {
+  card.addEventListener("click", function () {
+    card.classList.toggle("flip");
+  });
+});

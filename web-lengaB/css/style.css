@@ -601,8 +601,6 @@ h6 {
 .thumb1 figure img {
   width: 100%;
 }
-.thumb1 .caption {
-}
 
 .thumb2 {
   margin-bottom: 40px;
@@ -1690,7 +1688,7 @@ strong {
   overflow: hidden;
   max-height: 0;
   padding: 0 15px;
-  background-color: #f9f9f9;
+  background-color: #a6825f75;
   color: #333;
   border-radius: 8px;
   transition: max-height 0.5s ease, padding 0.5s ease;
@@ -1698,7 +1696,7 @@ strong {
 
 .accordion-content.open {
   padding: 15px;
-  max-height: 300px; /* Ajusta el máximo alto de acuerdo con el contenido */
+  max-height: 300px; 
 }
 
 .process-card {
@@ -1817,15 +1815,6 @@ strong {
         background-color: #593a20; 
     }
 
-    .accordion-content {
-        overflow: hidden;
-        max-height: 0;
-        margin-bottom: 2rem;
-        background-color: #a6825f75;
-        color: #333;
-        transition: max-height 0.5s ease, padding 0.5s ease;
-    }
-
     .accordion-content.open {
         padding: 15px;
         max-height: 500px;
@@ -1882,4 +1871,194 @@ strong {
   background-color: rgba(200, 200, 200, 0.3); /* Gris suave con opacidad */
   border-radius: 10px;
   pointer-events: none;
+}
+
+/*=== HALLAZGOS ===*/
+#wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.hallazgo-card {
+  height: 400px; 
+  width: 300px;
+  border: 2px solid gray;
+  border-radius: 2rem;
+  position: relative;
+  perspective: 1000px;
+  cursor: pointer;
+  overflow: hidden; 
+  margin: 10px; 
+}
+
+.hallazgo-front,
+.hallazgo-back {
+  border-radius: 10px;
+  height: 100%; 
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1); 
+}
+
+.hallazgo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; 
+  flex-wrap: wrap; 
+}
+
+
+.hallazgo-front {
+  background-color: #2e7d32;
+  color: white;
+  transform: rotateY(0deg);
+  overflow: hidden; 
+}
+
+.hallazgo-top-pic {
+  height: 50%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+    background-color: rgba(0, 0, 0, 0.2); 
+}
+
+.hallazgo-top-pic::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Fondo blanco semitransparente */
+  z-index: 1; 
+}
+
+.hallazgo-info-box {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box; 
+}
+
+.hallazgo-info-box h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.hallazgo-info-box h2 {
+  font-size: 1rem;
+  color: #a9d5b0;
+}
+
+.hallazgo-social-bar {
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: white;
+}
+
+.hallazgo-social-bar a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.hallazgo-back {
+  background-color: #d9d9d9d2;
+  color: #333;
+  transform: rotateY(180deg);
+  padding: 20px;
+  box-sizing: border-box; 
+  border-radius: 10px;
+  text-align: justify;
+  overflow: hidden; 
+}
+
+.hallazgo-back .back-info p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+.hallazgo-back .hallazgo-social-bar a {
+  color: #2e7d32; /* Cambia el color del icono en la parte trasera */
+}
+
+.hallazgo-card.flip .hallazgo-front {
+  transform: rotateY(180deg);
+}
+
+.hallazgo-card.flip .hallazgo-back {
+  transform: rotateY(360deg);
+}
+
+/*=== Recomendaciones ===*/
+.recomendaciones {
+  padding: 50px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.recomendaciones-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; 
+}
+
+.recomendacion-card {
+  width: 280px;
+  padding: 20px;
+  background-color: #ffffffb7;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recomendacion-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.recomendacion-card i {
+  font-size: 2.5rem;
+  color: #2e7d32; /* Íconos en color verde */
+  margin-bottom: 15px;
+}
+
+.recomendacion-card h2 {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.recomendacion-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
 }
