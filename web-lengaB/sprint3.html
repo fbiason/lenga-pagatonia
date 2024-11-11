@@ -9,7 +9,7 @@
     <meta name="author" content="Your name" />
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-  
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -53,7 +53,12 @@
     <script type="text/javascript" src="js/supersized.core.3.2.1.js"></script>
 
     <script type="text/javascript" src="js/camera.js"></script>
+    <script
+      type="text/javascript"
+      src="js/jquery.mobile.customized.min.js"
+    ></script>
   </head>
+
   <body class="subpage">
 
 
@@ -90,32 +95,22 @@
                   >
                 </li>
                 <li class="nav2 span3">
+                  <a href="organization.html"
+                    ><span class="over1"></span><span class="over2"></span
+                    ><span class="ic1"><i class="fas fa-project-diagram"></i></span
+                    ><span class="txt1">Organización de trabajo</span></a
+                  >
+                </li>
+
+              <li class="nav3 span3">
                   <a href="goals.html"
                     ><span class="over1"></span><span class="over2"></span
                     ><span class="ic1"><i class="fas fa-bullseye"></i></span
                     ><span class="txt1">Objetivos</span></a
                   >
                 </li>
-                <li class="nav3 active span3">
-                  <a href="tools.html"
-                    ><span class="over1"></span><span class="over2"></span
-                    ><span class="ic1"><i class="fas fa-tools"></i></span
-                    ><span class="txt1"><p>Sprint 1</p></span
-                    ><span class="txt2">Herramientas</span></a
-                  >
-                </li>
-                <li class="nav4 span3">
-                  <a href="dictionary.html"
-                    ><span class="over1"></span><span class="over2"></span
-                    ><span class="ic1"><i class="fas fa-database"></i></span
-                    ><span class="txt1"><p>Sprint 1</p></span
-                    ><span class="txt2"
-                      >Diccionario y Análisis exploratorio</span
-                    ></a
-                  >
-                </li>
+                
               </ul>
-
               <div class="slider_wrapper">
                 <div class="row">
                   <div class="span3">
@@ -150,43 +145,30 @@
               </div>
 
               <ul class="menu menu2 row sf-menu clearfix">
-                <li class="nav5 span3 sub-menu sub-menu-1">
-                  <a href="etl.html"
+                <li class="nav4 span3 sub-menu sub-menu-1">
+                  <a href="sprint1.html"
                     ><span class="over1"></span><span class="over2"></span
                     ><span class="ic1"><i class="fas fa-exchange-alt"></i></span
-                    ><span class="txt1"><p>Sprint 2</p></span
-                    ><span class="txt2"
-                      >Combinación de Datos y Proceso ETL</span
+                    ><span class="txt1"><p>Sprint 1</p></span
+                    ></span
                     ></a
                   >
                 </li>
-                <li class="nav6 span3 sub-menu sub-menu-1">
-                  <a href="data-work.html"
+                <li class="nav5 span3 sub-menu sub-menu-1">
+                  <a href="sprint2.html"
                     ><span class="over1"></span><span class="over2"></span
                     ><span class="ic1"><i class="fas fa-chart-bar"></i></span
                     ><span class="txt1"><p>Sprint 2</p></span
-                    ><span class="txt2"
-                      >Datos de trabajo y Visualización</span
                     ></a
                   >
                 </li>
 
-                <li class="nav7 span3 sub-menu sub-menu-1">
-                  <a href="findings.html"
+                <li class="nav6 active span3 sub-menu sub-menu-1">
+                  <a href="sprint3.html"
                     ><span class="over1"></span><span class="over2"></span
                     ><span class="ic1"><i class="fas fa-check-circle"></i></span
                     ><span class="txt1"><p>Sprint 3</p></span
-                    ><span class="txt2"
-                      >Hallazgos y Evaluación de resultados</span
                     ></a
-                  >
-                </li>
-                <li class="nav8 span3">
-                  <a href="conclusion.html"
-                    ><span class="over1"></span><span class="over2"></span
-                    ><span class="ic1"
-                      ><i class="fas fa-flag-checkered"></i></span
-                    ><span class="txt1"><p>Conclusión</p></span></a
                   >
                 </li>
               </ul>
@@ -197,46 +179,143 @@
       <!-- End Menu  -->
 
 
-<section>
-  <h1 class="section-title">Herramientas de Trabajo</h1>
-  <div id="tools" class="container tools-section">
 
-    <!-- Análisis de Datos -->
-    <div class="tool-card">
-      <h3 class="title-tools">Análisis de Datos</h3>
-      <div class="tool-logo">
-        <img src="images/power-bi.png" alt="Power BI" class="tool-img">
-        <img src="images/python.png" alt="Python" class="tool-img">
-        <img src="images/kobotoolbox.png" alt="KobotoolBox" class="tool-img">
+
+<section class="findings">
+  <h1 class="section-title">Hallazgos</h1>
+  <div id="wrapper">
+<div id="content" class="hallazgo-container">
+
+      <!-- Primera tarjeta: Incremento en la Extracción -->
+      <div class="hallazgo-card">
+        <!-- Front of the Card -->
+        <div class="hallazgo-front">
+          <div class="hallazgo-top-pic" style="background-image: url('images/hallazgos1.jpg');"></div>
+          <div class="hallazgo-info-box">
+            <div class="info">
+              <h1>Incremento en la Extracción</h1>
+            </div>
+          </div>
+          <div class="hallazgo-social-bar">
+            <a href="javascript:void(0);" class="more-info">
+              <i class="fa fa-eye"></i> Ver más
+            </a>
+          </div>
+        </div>
+
+        <!-- Back of the Card -->
+        <div class="hallazgo-back">
+          <div class="back-info">
+            <p>
+              A partir de 2020, se observó un incremento notable en la cantidad de trozas, alcanzando su punto máximo en 2022. Este aumento puede estar asociado con la reactivación postpandemia. Sin embargo, a partir de ese pico, se detectó una caída abrupta en la producción, probablemente influenciada por las condiciones económicas adversas del país.
+            </p>
+          </div>
+          <div class="hallazgo-social-bar">
+            <a href="javascript:void(0);" class="more-info">
+              <i class="fa fa-undo"></i> Regresar
+            </a>
+          </div>
+        </div>
       </div>
-      <p>Herramientas para visualización, análisis y recolección de datos, facilitando la toma de decisiones basada en datos y procesos de ETL.</p>
-    </div>
 
-    <!-- Desarrollo Web -->
-    <div class="tool-card">
-      <h3 class="title-tools">Presentación Web</h3>
-      <div class="tool-logo">
-        <img src="images/Django-logo.png" alt="Django" class="tool-img">
-        <img src="images/devs.png" alt="HTML" class="tool-img">
-        <img src="images/bootstrap.png" alt="Bootstrap" class="tool-img">
+      <!-- Segunda tarjeta: Inconsistencias en la Calidad de los Datos -->
+      <div class="hallazgo-card">
+        <!-- Front of the Card -->
+        <div class="hallazgo-front">
+          <div class="hallazgo-top-pic" style="background-image: url('images/hallazgos2.webp');"></div>
+          <div class="hallazgo-info-box">
+            <div class="info">
+              <h1>Inconsistencias en la Calidad de los Datos</h1>
+            </div>
+          </div>
+          <div class="hallazgo-social-bar">
+            <a href="javascript:void(0);" class="more-info">
+              <i class="fa fa-eye"></i> Ver más
+            </a>
+          </div>
+        </div>
+
+        <!-- Back of the Card -->
+        <div class="hallazgo-back">
+          <div class="back-info">
+            <p>
+              Durante el análisis, se identificaron falencias en la precisión de los datos cargados. Estas inconsistencias pueden generar desviaciones en los resultados y dificultan una evaluación precisa de los indicadores de rendimiento de la empresa.
+            </p>
+          </div>
+          <div class="hallazgo-social-bar">
+            <a href="javascript:void(0);" class="more-info">
+              <i class="fa fa-undo"></i> Regresar
+            </a>
+          </div>
+        </div>
       </div>
-      <p>Frameworks y lenguajes para el desarrollo de aplicaciones web, proporcionando una estructura robusta y diseño responsivo.</p>
-    </div>
 
-    <!-- Colaboración y Gestión -->
-    <div class="tool-card">
-      <h3 class="title-tools">Colaboración y Gestión</h3>
-      <div class="tool-logo">
-        <img src="images/trello.png" alt="Trello" class="tool-img">
-        <img src="images/github.png" alt="GitHub" class="tool-img">
-        <img src="images/drive.webp" alt="Google Drive" class="tool-img">
-        <img src="images/vsc.png" alt="VS Code" class="tool-img">
-      </div>
-      <p>Plataformas y herramientas para gestionar proyectos, colaboración en código y almacenamiento de documentos.</p>
     </div>
-
   </div>
 </section>
+
+
+
+<section class="recomendaciones">
+   <h1 class="section-title">Recomendaciones</h1>
+   <div class="recomendaciones-container">
+   
+     <!-- Recomendación 1 -->
+     <div class="recomendacion-card">
+       <i class="fa fa-layer-group"></i>
+       <h2>Optimización de Columnas</h2>
+     </div>
+
+     <!-- Recomendación 2 -->
+     <div class="recomendacion-card">
+       <i class="fa fa-check-circle"></i>
+       <h2>Sistema de Validación</h2>
+     </div>
+
+     <!-- Recomendación 3 -->
+     <div class="recomendacion-card">
+       <i class="fa fa-robot"></i>
+       <h2>Automatización de la Carga</h2>
+
+     </div>
+
+<!-- Recomendación 4 -->
+<div class="recomendacion-card">
+   <i class="fa fa-swatchbook"></i>
+   <h2>Estandarización de Datos</h2>
+   <div class="button-container">
+<button class="open-popup-btn">
+    <img src="images/kobotoolbox.png" alt="KoboToolbox" class="kobo-logo">
+    Ver más
+</button>
+   </div>
+</div>
+
+
+     <!-- Recomendación 5 -->
+     <div class="recomendacion-card">
+       <i class="fa fa-chalkboard-teacher"></i>
+       <h2>Capacitación Continua</h2>
+     </div>
+
+     <!-- Recomendación 6 -->
+     <div class="recomendacion-card">
+       <i class="fa fa-search"></i>
+       <h2>Monitoreo y Feedback</h2>
+     </div>
+   
+   </div>
+</section>
+
+<!-- Popup Modal -->
+<div id="popup-modal" class="popup-modal">
+   <div class="popup-content">
+     <span class="close-popup">&times;</span>
+     <iframe src="CLASIFICACION DE CALIDAD Y VOLUMETRIA DE CANCHONES _ KoboToolbox.pdf" width="100%" height="500px"></iframe>
+   </div>
+</div>
+
+
 
       <footer>
         <div class="hl1"></div>
@@ -244,6 +323,7 @@
           Copyright © 2024. Centro Politécnico Malvinas Argentinas
         </div>
       </footer>
+
     </div>
 
         <!-- Scroll to Top Button -->

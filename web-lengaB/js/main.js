@@ -1,9 +1,27 @@
 // Ocultar el contenido de las secciones de análisis exploratorio al cargar la página
 $(document).ready(function () {
-  $(".toggle-content").hide(); // Ocultar el contenido inicialmente
+  $(".toggle-content").css({
+    maxHeight: "0",
+    overflow: "hidden",
+    opacity: "0",
+    transition: "max-height 0.5s ease, opacity 0.5s ease",
+  }); // Ocultar el contenido inicialmente
 
   $(".toggle-header").click(function () {
-    $(this).next(".toggle-content").slideToggle(300); // Alternar visibilidad del contenido
+    const content = $(this).next(".toggle-content");
+
+    if (content.css("maxHeight") === "0px") {
+      content.css({
+        maxHeight: content.prop("scrollHeight") + "px",
+        opacity: "1",
+      });
+    } else {
+      content.css({
+        maxHeight: "0",
+        opacity: "0",
+      });
+    }
+
     $(this).toggleClass("active"); // Añadir clase activa para cambiar el ícono de despliegue
   });
 
@@ -84,6 +102,27 @@ document.querySelectorAll(".accordion-button").forEach((button) => {
   });
 });
 
+// Herramientas
+document.addEventListener("DOMContentLoaded", () => {
+  const clickableImages = document.querySelectorAll(".tool-click");
+
+  clickableImages.forEach((image) => {
+    image.addEventListener("click", () => {
+      const targetId = image.dataset.target; // Obtén el ID del objetivo
+      const targetImage = document.getElementById(targetId);
+
+      if (targetImage.classList.contains("hidden")) {
+        targetImage.classList.remove("hidden");
+        targetImage.classList.add("visible");
+      } else {
+        targetImage.classList.remove("visible");
+        targetImage.classList.add("hidden");
+      }
+    });
+  });
+});
+
+
 // Visaulización img etl
 function generateReport() {
   const reportImage = document.getElementById("report-image");
@@ -101,4 +140,26 @@ document.querySelectorAll(".hallazgo-card").forEach((card) => {
   card.addEventListener("click", function () {
     card.classList.toggle("flip");
   });
+});
+
+// Selecciona el botón y el modal
+const openPopupBtn = document.querySelector(".open-popup-btn");
+const popupModal = document.getElementById("popup-modal");
+const closePopup = document.querySelector(".close-popup");
+
+// Abre el modal cuando se hace clic en el botón
+openPopupBtn.addEventListener("click", () => {
+  popupModal.style.display = "flex";
+});
+
+// Cierra el modal cuando se hace clic en la 'x'
+closePopup.addEventListener("click", () => {
+  popupModal.style.display = "none";
+});
+
+// Cierra el modal al hacer clic fuera del contenido
+window.addEventListener("click", (e) => {
+  if (e.target === popupModal) {
+    popupModal.style.display = "none";
+  }
 });
