@@ -189,10 +189,110 @@
     </div>
 
 
-      <section class="organization">
-  <h1 class="section-title">Organización de trabajo</h1>
-      </section>
+<section class="organization-section">
+  <h1 class="organization-title">Organización de Trabajo</h1>
+  <div class="organization-image-container">
+    <img src="images/organization.jpeg" alt="Organization Overview" class="organization-image" />
+  </div>
+  <!-- Cards -->
+  <div class="organization-cards-container">
+    <!-- Card 1 -->
+    <button class="organization-card open-modal-btn" data-modal="modal-whatsapp">
+      <div class="organization-card-img-container">
+        <img src="images/whatsapp.webp" alt="WhatsApp" class="organization-card-img small" />
+      </div>
+      <h3 class="organization-card-title">WhatsApp</h3>
+      <p class="organization-card-description">
+        Comunicación fluida en tiempo real a través de un grupo dedicado para el proyecto.
+      </p>
+    </button>
 
+    <!-- Modal WhatsApp -->
+    <div id="modal-whatsapp" class="modal">
+      <div class="modal-content">
+        <button class="close-modal-btn">&times;</button>
+         <h3 class="organization-card-title">Grupos de WhatsApp</h3>
+        <div class="modal-img">
+          <img src="images/equipo-whatsapp.png" alt="Equipo WhatsApp" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <button class="organization-card open-modal-btn" data-modal="modal-drive">
+      <div class="organization-card-img-container">
+        <img src="images/drive.webp" alt="Google Drive" class="organization-card-img small" />
+      </div>
+      <h3 class="organization-card-title">Google Drive</h3>
+      <p class="organization-card-description">
+        Almacenamiento y organización de archivos compartidos para el equipo.
+      </p>
+    </button>
+
+    <!-- Modal Google Drive -->
+    <div id="modal-drive" class="modal">
+      <div class="modal-content">
+        <button class="close-modal-btn">&times;</button>
+         <h3 class="organization-card-title">Google Drive</h3>
+        <div class="modal-img">
+          <img src="images/drive-organization.png" alt="Drive Organization" />
+        </div>
+      </div>
+    </div>
+
+<!-- Card 3 -->
+<button class="organization-card open-modal-btn" data-modal="modal-trello">
+  <div class="organization-card-img-container">
+    <img src="images/trello.png" alt="Trello" class="organization-card-img small" />
+  </div>
+  <h3 class="organization-card-title">Trello</h3>
+  <p class="organization-card-description">
+    Gestión de tareas y seguimiento del progreso del proyecto.
+  </p>
+</button>
+
+<!-- Modal Trello -->
+<div id="modal-trello" class="modal">
+  <div class="modal-content">
+    <button class="close-modal-btn">&times;</button>
+     <h3 class="organization-card-title">Trello</h3>
+    <div class="modal-carousel">
+      <img id="carousel-image" src="images/trello-organization.png" alt="Trello Organization" class="carousel-image" />
+    </div>
+  </div>
+</div>
+
+<!-- Card 4 -->
+<button class="organization-card open-modal-btn" data-modal="modal-videoconferencias">
+  <div class="organization-card-img-container">
+    <img src="images/meet.png" alt="Google Meet" class="organization-card-img small" />
+    <img src="images/jitsi.png" alt="Jitsi" class="organization-card-img small" />
+  </div>
+  <h3 class="organization-card-title">Videoconferencias</h3>
+  <p class="organization-card-description">
+    Google Meet y Jitsi fueron las principales herramientas para reuniones virtuales.
+  </p>
+</button>
+
+<!-- Modal Videoconferencias -->
+<div id="modal-videoconferencias" class="modal">
+  <div class="modal-content">
+    <button class="close-modal-btn">&times;</button>
+    <h3 class="organization-card-title">Videoconferencias</h3>
+    <div class="modal-carousel">
+      <div class="carousel-track">
+        <img src="images/youtube1.jpeg" alt="Reunión en YouTube" class="carousel-image" />
+        <img src="images/youtube2.jpeg" alt="Reunión en YouTube" class="carousel-image" />
+        <img src="images/youtube3.jpeg" alt="Reunión en YouTube" class="carousel-image" />
+        <img src="images/youtube4.jpeg" alt="Reunión en YouTube" class="carousel-image" />
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  </div>
+</section>
 
 
       
@@ -208,6 +308,11 @@
     <a href="#" id="scroll-to-top" title="Back to Top">
       <i class="fas fa-chevron-up"></i>
     </a>
+
+    <!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
 
     <script type="text/javascript" src="js/bootstrap.js"></script>
     <script src="js/main.js"></script>

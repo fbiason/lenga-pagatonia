@@ -1399,60 +1399,235 @@ body::before {
   padding: 10px 15px;
   color: #3e2f1c;
 }
-/* ===== HERRAMIENTAS ===== */
-.tools-section {
+
+/* ===== ORGANIZACIÓN ===== */
+.organization-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+        text-align: center;
+}
+
+.organization-cards-container {
   display: flex;
-  justify-content: space-evenly; 
   flex-wrap: nowrap;
+  justify-content: space-between;
   gap: 20px;
-  padding: 50px 0;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 1200px;
 }
 
-.tool-card {
+
+.organization-card {
+  flex: 0 1 calc(25% - 20px);
   text-align: center;
-  margin: 0 auto;
-}
-.tool-images {
-  display: flex;
-  flex-direction: column; /* Asegura que las imágenes se apilen verticalmente */
-  align-items: center;
-  gap: 10px; /* Espacio entre las imágenes */
-}
-
-.tool-img {
-  max-width: 100%;
-  height: auto;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.tool-img:hover {
+.organization-card-title {
+  color: white;
+  font-size: 2rem;
+}
+
+.organization-card h3 {
+  color: #166b1e;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+
+
+.organization-image-container {
+  text-align: center;
+  margin: 30px auto;
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); 
+}
+
+/* Imagen principal */
+.organization-image {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Líneas iniciales: top y bottom visibles por defecto */
+.organization-image-container::before,
+.organization-image-container::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, rgba(22, 107, 30, 1), rgba(22, 107, 30, 0.5));
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.organization-image-container::before {
+  top: 0; 
+}
+
+.organization-image-container::after {
+  bottom: 0;
+}
+
+.organization-image-container:hover::before,
+.organization-image-container:hover::after {
+  transform: translateY(-8px); 
+}
+
+.organization-image-container:hover::after {
+  transform: translateY(8px);
+}
+
+
+.organization-card-img {
+  width: 50px;
+  height: auto;
+}
+
+.organization-card:hover {
+  transform: scale(1.05);
+}
+
+/* Modal */
+.modal {
+
+  position: fixed;
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: visibility 0.3s ease, opacity 0.3s ease;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.8); 
+}
+
+.modal-content {
+  border-radius: 12px;
+  padding: 30px;
+  width: 600px;
+  max-width: 90%;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+/* Carousel image transition */
+.carousel-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 5px;
+  transition: opacity 0.5s ease-in-out; /* Smooth transition for opacity */
+}
+
+.fade-out {
+  opacity: 0; /* Fade-out effect */
+}
+
+.fade-in {
+  opacity: 1; /* Fade-in effect */
+}
+
+/* Modal Carousel */
+.modal-carousel {
+  overflow: hidden;
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  border-radius: 2rem;
+  transition: transform 0.5s ease-in-out; 
+}
+
+.carousel-track:hover {
+  transform: scale(1.05); 
+}
+
+.carousel-image {
+  min-width: 100%;
+  border-radius: 2rem;
+}
+
+/* Botón de cierre */
+.close-modal-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: linear-gradient(45deg, #ff6b6b, #f94d6a);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.close-modal-btn:hover {
+  background: linear-gradient(45deg, #ff3b3b, #f92d4a);
   transform: scale(1.1);
 }
 
-.hidden {
-  max-height: 0; /* Imagen completamente oculta */
-  opacity: 0; /* Invisibilidad inicial */
-  overflow: hidden; /* Evita contenido desbordado */
-  transition: max-height 0.5s ease, opacity 0.5s ease; /* Transición para visibilidad */
+.close-modal-btn:active {
+  transform: scale(1);
 }
 
-.visible {
-  max-height: 500px; /* Ajusta este valor según la altura real de la imagen */
-  opacity: 1; /* Totalmente visible */
+/* Imágenes más grandes */
+.modal-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 20px;
+  transition: transform 0.3s ease;
+}
+
+.modal-img img:hover {
+  transform: scale(1.05); /* Efecto zoom al pasar el mouse */
+}
+
+/* Mostrar modal */
+.modal.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.carousel-container {
   overflow: hidden;
-  transition: max-height 0.5s ease, opacity 0.5s ease; /* Transición para visibilidad */
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.carousel-image {
+  width: 100%;
+  flex-shrink: 0;
+  max-width: 500px;
+  object-fit: contain;
+  border-radius: 10px;
 }
 
 
-.arbusto {
-  z-index: 2;
-}
-
-.tronco{
-  height: 500px;
-  margin-top: -10rem;
-}
 
 /* ===== DICCIONARIO Y ANÁLISIS EXPLORATORIO ===== */
 .diccionario-section {
@@ -1632,7 +1807,6 @@ body::before {
   padding: 30px;
   text-align: center;
   border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .etl-description {
@@ -1643,7 +1817,58 @@ body::before {
   line-height: 1.5;
 }
 
-/* ===== Report Button ===== */
+.etl-image {
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
+
+.etl-tools {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+  padding: 20px;
+  background: linear-gradient(135deg, #ebefeb, #a86f4c);
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.etl-tools img {
+  max-width: 150px;
+  height: auto;
+  margin-top: 10px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.etl-tool-img:hover {
+  transform: scale(1.1); /
+}
+
+.report-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.report-button:hover {
+  background-color: #b95f1f;
+}
+
+#report-image {
+  margin-top: 20px;
+  max-width: 100%;
+  height: auto;
+  opacity: 0; 
+  transition: opacity 0.3s ease;
+}
+
 .reporte-trimestral {
   align-items: center;
   display: inline-grid;
@@ -1678,7 +1903,7 @@ body::before {
   margin-top: 20px;
   max-width: 80%;
   opacity: 0;
-  display: inline-block; /* Asegura que la imagen respete el text-align de su contenedor */
+  display: inline-block; 
   transition: opacity 0.5s ease;
   margin-left: 6rem;
 }
