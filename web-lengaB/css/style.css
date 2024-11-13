@@ -1312,8 +1312,9 @@ body::before {
 
 /* ===== OBJETIVOS SECTION ===== */
 .img-obj {
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
+  border-radius: 2rem;
 }
 
 .title-goal {
@@ -1322,7 +1323,7 @@ body::before {
 
 .caption .txt-obj {
   color: whitesmoke;
-  font-size: 24px;
+  font-size: 20px;
   text-align: justify;
   line-height: 1.5;
 }
@@ -1399,6 +1400,43 @@ body::before {
   padding: 10px 15px;
   color: #3e2f1c;
 }
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  background-color: #fefefe;
+  color: #333;
+  padding: 0 15px;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-content.open {
+  max-height: 500px;
+  padding: 15px 20px;
+}
+
+.accordion-content p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.accordion-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  width: 50%;
+  border-radius: 8px;
+  margin: 10px auto 0;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.accordion-image:hover {
+  transform: scale(1.05);
+}
+
 
 /* ===== ORGANIZACIÓN ===== */
 .organization-title {
@@ -1971,21 +2009,48 @@ strong {
   }
 }
 
+.accordion-section {
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.accordion-title {
+  font-size: 2rem;
+  text-align: center;
+  color: #166b1e;
+  margin-bottom: 20px;
+}
+
+.accordion {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.accordion-item {
+  margin-bottom: 15px;
+  border: 2px solid #166b1e;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.accordion-item:hover {
+  transform: scale(1.02);
+}
+
 .accordion-button {
-  width: 100%;
-  padding: 15px;
-  font-size: 1.5rem;
+  background: linear-gradient(90deg, #2e7d32, #1e8b28);
+  color: #fff;
+  padding: 15px 20px;
+  font-size: 1.2rem;
   text-align: left;
-  background-color: #2e7d32;
-  color: white;
   border: none;
-  outline: none;
   cursor: pointer;
+  width: 100%;
   display: flex;
   align-items: center;
-  transition: background 0.3s ease;
-  border-radius: 8px;
-  margin-bottom: 10px;
+  justify-content: space-between;
+  transition: background-color 0.3s ease;
 }
 
 .accordion-button i {
@@ -1993,26 +2058,27 @@ strong {
 }
 
 .accordion-button:hover {
-  background-color: #1e8b28;
+  background: linear-gradient(90deg, #166b1e, #2e7d32);
 }
 
 .accordion-content {
-  overflow: hidden;
   max-height: 0;
-  padding: 0 15px;
-  background-color: #a6825f75;
+  overflow: hidden;
+  background-color: #fefefe;
   color: #333;
-  border-radius: 8px;
+  padding: 0 15px;
   transition: max-height 0.5s ease, padding 0.5s ease;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .accordion-content.open {
-  padding: 15px;
-  max-height: 300px; 
+  max-height: 300px;
+  padding: 15px 20px;
 }
 
-.process-card {
-  margin-bottom: 20px;
+.accordion-content p {
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 /* ===== Visualización Section ===== */
