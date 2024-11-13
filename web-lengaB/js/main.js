@@ -360,6 +360,28 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// SPRINT 1 HERRAMIENTAS
+document.addEventListener("DOMContentLoaded", () => {
+  const clickableImages = document.querySelectorAll(".tool-click");
+
+  clickableImages.forEach((image) => {
+    image.addEventListener("click", () => {
+      const targetId = image.dataset.target; // Obtén el ID del objetivo
+      const targetImage = document.getElementById(targetId);
+
+      if (targetImage.classList.contains("hidden")) {
+        // Mostrar la imagen con una transición suave
+        targetImage.classList.remove("hidden");
+        targetImage.classList.add("visible");
+      } else {
+        // Ocultar la imagen con una transición suave
+        targetImage.classList.remove("visible");
+        targetImage.classList.add("hidden");
+      }
+    });
+  });
+});
+
 
 // SPRINT 2 ETL
 document.addEventListener("DOMContentLoaded", () => {
