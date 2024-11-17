@@ -1334,6 +1334,25 @@ body::before {
   line-height: 1.5;
 }
 
+.img-obj-secondary {
+  position: absolute;
+  right: 0;
+  bottom: -10px;
+  width: 300px !important;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-obj-secondary:hover {
+  transform: scale(1.1);
+}
+
+.thumbnail {
+  position: relative; 
+}
+
+
 
 /* Estilos para el acordeón con tema de madera */
 .accordion {
@@ -1680,7 +1699,7 @@ body::before {
   flex: 0 1 calc(25% - 20px); 
   text-align: center;
   border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+   transition: opacity 0.5s ease, box-shadow 0.3s ease;
 }
 
 .tool-card:hover {
@@ -1821,41 +1840,42 @@ transition: opacity 0.3s ease, transform 0.3s ease;
   cursor: pointer;
   margin-bottom: 10px;
   padding: 10px;
-  background-color: #2E7D32;
+  background-color:#a6561d;
   border-radius: 5px;
   color: whitesmoke;
   transition: background 0.3s ease;
 }
 
 .toggle-header:hover {
-  background-color: #b95f1f;
+  background-color: #8B4513; 
 }
 
+
 .toggle-header.active::after {
-  content: "▲"; /* Indicador de que está desplegado */
+  content: "▲"; 
   float: right;
 }
 
 .toggle-header::after {
-  content: "▼"; /* Indicador de que está contraído */
+  content: "▼"; 
   float: right;
 }
 
 .toggle-content {
-  background-color: #555;
+  background-color: #2E7D32;
   padding: 15px;
   color: #e1e1e1;
   border-radius: 0 0 5px 5px;
   margin-bottom: 15px;
-  max-height: 0; /* Inicialmente oculto */
-  overflow: hidden; /* Ocultar contenido desbordado */
-  opacity: 0; /* Invisibilidad inicial */
-  transition: max-height 0.5s ease, opacity 0.5s ease; /* Transición suave */
+  max-height: 0; 
+  overflow: hidden; 
+  opacity: 0; 
+  transition: max-height 0.5s ease, opacity 0.5s ease;
 }
 
 .toggle-content.active {
-  max-height: 500px; /* Altura máxima ajustable */
-  opacity: 1; /* Visible */
+  max-height: 500px;
+  opacity: 1;
 }
 
 .analisis-part:hover {
@@ -1863,11 +1883,15 @@ transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .analisis-part h3 {
-  color: #a6e22e; /* Verde brillante para destacar el título */
+  color: #a6e22e; 
   font-size: 1.8rem;
   margin-bottom: 15px;
   display: flex;
   align-items: center;
+}
+
+.analisis-image {
+  width: 50%;
 }
 
 .analisis-part h3::before {
@@ -1946,9 +1970,67 @@ transition: opacity 0.3s ease, transform 0.3s ease;
   transform: scale(1.1); /
 }
 
+/* === Automatización ===*/
+/* Automatización Section Grid */
+.automatizacion-grid {
+  display: flex;
+  flex-wrap: nowrap; 
+  gap: 20px;
+  justify-content: space-between; 
+  align-items: flex-start; 
+  margin-top: 20px;
+}
+
+.python-logo {
+  width: 40px; 
+  height: auto;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.automatizacion-column {
+  margin: 1rem;
+  flex: 1 1 50%; 
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1); /* Fondo ligero para destacar */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.automatizacion-column h2 {
+  font-size: 1.8rem;
+  color: whitesmoke;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.automatizacion-column p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ffffff;
+  text-align: justify;
+}
+
+.macro-image {
+  width: 100%; /* Tamaño adaptativo */
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.macro-image:hover {
+  transform: scale(1.05);
+}
+
+.txt-macro {
+  color: whitesmoke;
+}
+
 .report-button {
   margin-top: 20px;
-  padding: 10px 20px;
   background-color: #2e7d32;
   color: white;
   border: none;
@@ -1961,12 +2043,9 @@ transition: opacity 0.3s ease, transform 0.3s ease;
   background-color: #b95f1f;
 }
 
-#report-image {
-  margin-top: 20px;
-  max-width: 100%;
-  height: auto;
-  opacity: 0; 
-  transition: opacity 0.3s ease;
+.reporte-container {
+  display: flex;
+  justify-content: center;
 }
 
 .reporte-trimestral {
@@ -1999,24 +2078,182 @@ transition: opacity 0.3s ease, transform 0.3s ease;
   transform: scale(1);
 }
 
-#report-image {
-  margin-top: 20px;
-  max-width: 80%;
-  opacity: 0;
-  display: inline-block; 
-  transition: opacity 0.5s ease;
-  margin-left: 6rem;
+.reporte-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
+
+.reporte-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.reporte-image:active {
+  transform: scale(1.1);
+}
+
+#report-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block; 
+  margin: 20px auto;
+  cursor: pointer;
+  transition: transform 1s ease, box-shadow 1s ease; 
+}
+
+#report-image:hover {
+  transform: scale(1.8); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+  z-index: 100;
+}
+
+.image-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+}
+
+.image-modal img {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.image-modal .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+
+/* Contenedor del Slider */
+.slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* Oculta los elementos que se desbordan */
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.1); /* Fondo claro para destacar el slider */
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* Pista deslizante */
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+/* Figura del Slider */
+.macro-figure {
+  flex: 0 0 100%; /* Cada imagen ocupa el 100% del contenedor */
+  text-align: center;
+  padding: 5px;
+}
+
+/* Imágenes dentro del slider */
+.macro-image {
+  width: 250px; /* Ancho fijo */
+  height: 180px; /* Altura fija */
+  object-fit: cover; /* Recortar la imagen para llenar el contenedor */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.macro-image:hover {
+  transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+}
+
+/* Botones de navegación */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.slider-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+
+.move-image {
+  animation: moveEffect 5s infinite alternate;
+}
+
+@keyframes moveEffect {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+.macro-section {
+  margin-top: 40px;
+  text-align: center;
+}
+
+
+.macro-description {
+  font-size: 1.1rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+.macro-figure {
+  flex: 0 0 auto;
+  text-align: center;
+}
+
+.macro-gallery {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 10px;
+}
+
 
 /* ===== Datos de Trabajo ===== */
-.data-work {
-  padding: 40px;
-  border-radius: 10px;
-  color: #333;
-  max-width: 900px;
-  margin: auto;
-}
-
 .section-title {
   text-align: center;
   font-size: 2.5rem;
@@ -2172,12 +2409,11 @@ strong {
 
 .powerbi-frame {
   width: 100%;
-  max-width: 1100px; /* Ajusta para que se vea bien en pantallas grandes */
+  max-width: 1100px; 
   height: 600px;
   border-radius: 8px;
   border: none;
 }
-
 
 /* ===== Empresa ===== */
 
@@ -2294,7 +2530,7 @@ strong {
 .video-politecnico {
   width: 100%;
   height: 300px;
-  border: 5px solid #8B4513; /* Color madera */
+  border: 5px solid #8B4513; 
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
   object-fit: cover;

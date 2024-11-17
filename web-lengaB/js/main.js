@@ -1,3 +1,60 @@
+// SPRINT 1 ANALISIS EXPLORATORIO
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleHeaders = document.querySelectorAll(".toggle-header");
+
+  toggleHeaders.forEach((header) => {
+    header.addEventListener("click", () => {
+      const content = header.nextElementSibling;
+
+      // Verificar si la sección ya está activa
+      const isActive = content.classList.contains("active");
+
+      // Cerrar todas las demás secciones
+      document.querySelectorAll(".toggle-content").forEach((otherContent) => {
+        otherContent.classList.remove("active");
+        otherContent.style.maxHeight = null; // Ocultar el contenido
+        otherContent.style.opacity = 0; // Desaparecer el contenido visualmente
+      });
+
+      // Remover la clase activa de los otros headers
+      document.querySelectorAll(".toggle-header").forEach((otherHeader) => {
+        otherHeader.classList.remove("active");
+      });
+
+      // Si no estaba activa, abrir la sección actual
+      if (!isActive) {
+        content.classList.add("active");
+        content.style.maxHeight = content.scrollHeight + "px";
+        content.style.opacity = 1;
+        header.classList.add("active");
+      }
+    });
+  });
+});
+
+document.querySelectorAll(".toggle-header").forEach((header) => {
+  header.addEventListener("click", () => {
+    const container = header.parentElement;
+    const allContainers = document.querySelectorAll(".toggle-container");
+
+    allContainers.forEach((c) => {
+      if (c !== container) {
+        c.classList.remove("active");
+        c.querySelector(".toggle-content").style.maxHeight = null;
+      }
+    });
+
+    container.classList.toggle("active");
+    const content = container.querySelector(".toggle-content");
+
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+});
+
 // Ocultar el contenido de las secciones de análisis exploratorio al cargar la página
 $(document).ready(function () {
   $(".toggle-content").css({
@@ -85,15 +142,24 @@ document
     });
   });
 
-// Empresa acordeón con transición suave
+ // Objetivos 
+// Acordeón: cerrar otros al abrir uno
 document.querySelectorAll(".accordion-button").forEach((button) => {
   button.addEventListener("click", () => {
     const content = button.nextElementSibling;
 
-    button.classList.toggle("active");
-    content.classList.toggle("open"); // Agrega o quita la clase 'open' para la transición
+    // Cerrar todos los demás acordeones
+    document.querySelectorAll(".accordion-content").forEach((otherContent) => {
+      if (otherContent !== content && otherContent.classList.contains("open")) {
+        otherContent.classList.remove("open");
+        otherContent.style.maxHeight = null;
+      }
+    });
 
-    // Ajusta la altura del contenido para activar la animación de transición
+    // Abrir o cerrar el acordeón seleccionado
+    button.classList.toggle("active");
+    content.classList.toggle("open");
+
     if (content.classList.contains("open")) {
       content.style.maxHeight = content.scrollHeight + "px";
     } else {
@@ -102,7 +168,7 @@ document.querySelectorAll(".accordion-button").forEach((button) => {
   });
 });
 
-// ORGANIZACION
+
 // ORGANIZACION
 document.addEventListener("DOMContentLoaded", () => {
   // Variables generales
@@ -382,7 +448,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-
 // SPRINT 2 ETL
 document.addEventListener("DOMContentLoaded", () => {
   const reportButton = document.getElementById("report-button");
@@ -439,6 +504,37 @@ function generateReport() {
     }
   });
 }
+
+
+// Macros
+document.addEventListener("DOMContentLoaded", () => {
+  const sliderTrack = document.querySelector(".slider-track");
+  const prevBtn = document.querySelector(".prev-btn");
+  const nextBtn = document.querySelector(".next-btn");
+
+  let currentIndex = 0;
+
+  // Función para mover el slider
+  const moveSlider = () => {
+    const offset = -currentIndex * 100; // Calcular el desplazamiento
+    sliderTrack.style.transform = `translateX(${offset}%)`;
+  };
+
+  // Botón anterior
+  prevBtn.addEventListener("click", () => {
+    currentIndex = currentIndex > 0 ? currentIndex - 1 : 0;
+    moveSlider();
+  });
+
+  // Botón siguiente
+  nextBtn.addEventListener("click", () => {
+    const totalSlides = sliderTrack.children.length;
+    currentIndex =
+      currentIndex < totalSlides - 1 ? currentIndex + 1 : totalSlides - 1;
+    moveSlider();
+  });
+});
+
 
 // Hallazgos
 document.querySelectorAll(".hallazgo-card").forEach((card) => {

@@ -177,7 +177,7 @@
       <!-- End Menu  -->
 
 
-<section class="data-work">
+<section class="etl-section">
   <h1 class="section-title">Proceso de ETL Y NORMALIZACIÓN</h1>
   <p class="etl-description">
     El proceso ETL (Extracción, Transformación y Carga) realizado en el
@@ -195,7 +195,7 @@
     <button class="accordion-button"><i class="fas fa-broom"></i> Proceso 1: Limpieza de Datos Inicial</button>
     <div class="accordion-content">
       <p>
-        Para iniciar el proceso ETL, se realizó una limpieza inicial, eliminando columnas innecesarias como <strong>Start</strong>, <strong>End</strong>, y <strong>Área</strong> según la recomendación del Ingeniero Favoretti. Esto mejoró la precisión al enfocarnos solo en datos relevantes.
+        Se identificaron columnas irrelevantes (<strong>Start</strong>, <strong>End</strong>, <strong>Área</strong>) y se eliminaron para centrarnos en datos clave como calidad de troza y volumetría. Además, se realizó la corrección de inconsistencias encontradas en las fechas.
       </p>
     </div>
   </div>
@@ -205,68 +205,82 @@
     <button class="accordion-button"><i class="fas fa-database"></i> Proceso 2: Limpieza y Desglose Detallado</button>
     <div class="accordion-content">
       <p>
-        En este paso, se trabajó en la base de datos de Lenga Patagonia, limpiando columnas de fecha, calidad de troza y volumetría. Se completaron campos vacíos y se mejoraron los datos para facilitar futuros análisis.
+        En este paso, se desglosaron datos de calidad por zonas geográficas y temporalidad, completando campos vacíos y estandarizando formatos. Esto permitió identificar tendencias clave en las trozas.
       </p>
     </div>
   </div>
 
-  <!-- Unificación de Procesos -->
-  <div class="process-card">
-    <button class="accordion-button"><i class="fas fa-layer-group"></i> Unificación y Resultados Finales</button>
+  <!-- Proceso 3 -->
+   <div class="process-card">
+    <button class="accordion-button"><i class="fas fa-layer-group"></i>Proceso 3 Unificación y Resultados Finales</button>
     <div class="accordion-content">
       <p>
-        Tras unificar los criterios de ambos procesos, se generó el archivo <strong>ETL FINAL</strong> para ser usado en el análisis de datos y reportes trimestrales.
-      </p>
-    </div>
-  </div>
-
-  <!-- Cookie Cutter -->
-  <div class="process-card">
-    <button class="accordion-button"><i class="fas fa-tools"></i> Incorporación de Cookie Cutter</button>
-    <div class="accordion-content">
-      <p>
-        Se utilizó la herramienta Cookie Cutter para organizar los datos sin modificar el contenido. En el directorio de Python, se incluyeron reportes trimestrales y visualizaciones en desarrollo.
-      </p>
-    </div>
-  </div>
-
-  <!-- Power BI -->
-  <div class="process-card">
-    <button class="accordion-button"><i class="fas fa-chart-bar"></i> Visualización en Power BI</button>
-    <div class="accordion-content">
-      <p>
-        En Power BI, se configuraron tarjetas y gráficos para indicar la cantidad total de trozas, el promedio de longitud, y una segmentación por calidad y año. Esto permite a clientes y analistas observar tendencias y clasificaciones de trozas.
+        La integración de los pasos anteriores generó un archivo único (<strong>ETL FINAL</strong>), que sirvió como base para los análisis y reportes en Power BI.
       </p>
     </div>
   </div>
 </section>
 
-
-
-<section class="etl-section">
-
+<section class="automatizacion">
   <h1 class="section-title">Automatización</h1>
 
-  <div class="reporte-trimestral">
-    <button
-      id="report-button"
-      class="report-button"
-    >
-      Ver reporte trimestral
-    </button>
-    <img
-      id="report-image"
-      src=""
-      alt="Reporte Trimestral"
-      style="display: none;"
-    />
-    <div class="etl-tools hidden">
-      <img id="report-image1" alt="Pandas" class="etl-tool-img" />
-      <img id="report-image2" alt="OpenPyXL" class="etl-tool-img" />
-      <img id="report-image3" alt="Matplotlib" class="etl-tool-img" />
+  <div class="automatizacion-grid">
+    <!-- Columna: Automatización Python -->
+    <div class="automatizacion-column">
+      <h2>
+        <img src="images/python.png" alt="Logo Python" class="python-logo" />
+        Automatización Python
+      </h2>
+      <div class="reporte-container">
+        <div class="reporte-trimestral">
+          <button id="report-button" class="report-button">Ver reporte trimestral</button>
+          <img id="report-image" src="" alt="Reporte Trimestral" style="display: none;" />
+          <div class="etl-tools hidden">
+            <img id="report-image1" alt="Pandas" class="etl-tool-img" />
+            <img id="report-image2" alt="OpenPyXL" class="etl-tool-img" />
+            <img id="report-image3" alt="Matplotlib" class="etl-tool-img" />
+          </div>
+        </div>
+      </div>
     </div>
+
+    <!-- Columna: Automatización con Macros -->
+<div class="automatizacion-column">
+  <h2>Automatización con Macros</h2>
+  <p class="macro-description">
+    Durante este sprint, se implementaron macros en Excel para automatizar tareas repetitivas, como la limpieza y transformación de datos. Estas macros permitieron acelerar el flujo de trabajo y minimizar errores humanos.
+  </p>
+
+  <!-- Slider de Imágenes -->
+  <div class="slider-container">
+    <div class="slider-track">
+      <figure class="macro-figure">
+        <img src="images/macros1.jpeg" alt="Volumetría Antes" class="macro-image" />
+        <figcaption class="txt-macro">Volumetría: Antes de las Macros</figcaption>
+      </figure>
+      <figure class="macro-figure">
+        <img src="images/macros2.jpeg" alt="Volumetría Macros" class="macro-image" />
+        <figcaption class="txt-macro">Volumetría: Después de las Macros</figcaption>
+      </figure>
+            <figure class="macro-figure">
+        <img src="images/macros3.jpeg" alt="Volumetría Macros" class="macro-image" />
+        <figcaption class="txt-macro">Muestra: Antes de las Macros</figcaption>
+      </figure>
+            <figure class="macro-figure">
+        <img src="images/macros3.jpeg" alt="Volumetría Macros" class="macro-image" />
+        <figcaption class="txt-macro">Muestra: Después de las Macros</figcaption>
+      </figure>
+    </div>
+    <!-- Controles -->
+    <button class="slider-btn prev-btn">←</button>
+    <button class="slider-btn next-btn">→</button>
+  </div>
+</div>
+
   </div>
 </section>
+
+
 
 
 <section class="visualizacion">
