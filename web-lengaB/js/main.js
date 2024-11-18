@@ -349,7 +349,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-
 // ORGANIZACIÓN - TRELLO CAROUSEL
 document.addEventListener("DOMContentLoaded", () => {
   const trelloModal = document.getElementById("modal-trello");
@@ -425,6 +424,39 @@ document.addEventListener("DOMContentLoaded", () => {
     currentIndex = 0; // Reset the index
   });
 });
+
+// Modal Política de Privacidad
+document.addEventListener("DOMContentLoaded", () => {
+	const openPrivacyBtn = document.querySelector(".open-privacy-btn");
+	const privacyModal = document.getElementById("modal-privacy");
+	const closePrivacyBtn = document.querySelector(".close-privacy-btn");
+
+	// Verifica que los elementos existen
+	if (openPrivacyBtn && privacyModal && closePrivacyBtn) {
+		// Mostrar el modal al hacer clic en el botón
+		openPrivacyBtn.addEventListener("click", () => {
+			privacyModal.classList.add("flex"); // Usar clase para mostrar
+		});
+
+		// Cerrar el modal al hacer clic en el botón de cierre
+		closePrivacyBtn.addEventListener("click", () => {
+			privacyModal.classList.remove("flex"); // Quitar la clase para ocultar
+		});
+
+		// Cerrar el modal al hacer clic fuera del contenido
+		privacyModal.addEventListener("click", (e) => {
+			if (e.target === privacyModal) {
+				privacyModal.classList.remove("flex"); // Quitar la clase para ocultar
+			}
+		});
+	} else {
+		console.error(
+			"No se encontraron los elementos para el modal de privacidad."
+		);
+	}
+});
+
+
 
 // SPRINT 1 HERRAMIENTAS
 document.addEventListener("DOMContentLoaded", () => {
@@ -505,7 +537,6 @@ function generateReport() {
   });
 }
 
-
 // Macros
 document.addEventListener("DOMContentLoaded", () => {
   const sliderTrack = document.querySelector(".slider-track");
@@ -564,3 +595,4 @@ window.addEventListener("click", (e) => {
     popupModal.style.display = "none";
   }
 });
+
