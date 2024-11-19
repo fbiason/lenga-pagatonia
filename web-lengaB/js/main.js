@@ -376,7 +376,7 @@ document.addEventListener("DOMContentLoaded", () => {
           carouselImage.classList.remove("fade-in");
         }, 500); // Remove fade-in effect after transition
       }, 500); // Time for fade-out effect
-    }, 3000); // Change every 3 seconds
+    }, 5000); // Change every 3 seconds
   };
 
   // Open modal and start carousel
@@ -425,7 +425,48 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Modal Política de Privacidad
+// SPRINT 2 - AUTOMATIZACION MACROS
+document.addEventListener("DOMContentLoaded", () => {
+	const modalVideoconferencias = document.getElementById(
+		"modal-macros"
+	);
+	const carouselTrack = modalVideoconferencias.querySelector(".carousel-track");
+	const images = carouselTrack.querySelectorAll(".carousel-image");
+
+	let currentIndex = 0;
+	let carouselInterval;
+
+	// Function to start the carousel
+	const startCarousel = () => {
+		carouselInterval = setInterval(() => {
+			currentIndex = (currentIndex + 1) % images.length;
+			const offset = -currentIndex * 100; // Calculate offset for the transform
+			carouselTrack.style.transform = `translateX(${offset}%)`;
+		}, 3000); // 3-second interval
+	};
+
+	// Open modal and start carousel
+	document
+		.querySelector(`[data-modal="modal-macros"]`)
+		.addEventListener("click", () => {
+			modalVideoconferencias.classList.add("show");
+			startCarousel();
+		});
+
+	// Close modal and stop carousel
+	modalVideoconferencias
+		.querySelector(".close-modal-btn")
+		.addEventListener("click", () => {
+			modalVideoconferencias.classList.remove("show");
+			clearInterval(carouselInterval);
+			carouselTrack.style.transform = "translateX(0)"; // Reset carousel to the first image
+			currentIndex = 0; // Reset the index
+		});
+});
+
+
+
+// POLÍTICA DE PRIVACIDAD
 document.addEventListener("DOMContentLoaded", () => {
 	const openPrivacyBtn = document.querySelector(".open-privacy-btn");
 	const privacyModal = document.getElementById("modal-privacy");
@@ -455,8 +496,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		);
 	}
 });
-
-
 
 // SPRINT 1 HERRAMIENTAS
 document.addEventListener("DOMContentLoaded", () => {
@@ -537,7 +576,7 @@ function generateReport() {
   });
 }
 
-// Macros
+// MACROS
 document.addEventListener("DOMContentLoaded", () => {
   const sliderTrack = document.querySelector(".slider-track");
   const prevBtn = document.querySelector(".prev-btn");
@@ -567,7 +606,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// Hallazgos
+// HALLAZGOS
 document.querySelectorAll(".hallazgo-card").forEach((card) => {
   card.addEventListener("click", function () {
     card.classList.toggle("flip");
