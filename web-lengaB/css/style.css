@@ -1395,41 +1395,13 @@ body::before {
   transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
   filter: grayscale(40%);
   z-index: 1;
+  transition: 0.8s;
 }
 
-.doc2 {
-  width: 1200px; 
-  height: auto;
-  margin-left: 50px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
-  filter: grayscale(40%);
-  margin-top: 4rem;
-  z-index: 1;
-}
-
-.doc3 {
-  width: 600px; 
-  height: auto;
-  margin-left: 50px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
-  filter: grayscale(40%);
-  margin-top: 2rem;
-}
-
-.doc4 {
-  width: 600px; 
-  height: auto;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
-  filter: grayscale(40%);
-  margin-top: 2rem;
-}
-
-.doc4:hover, .doc3:hover, .doc2:hover, .doc1:hover {
-  transform: scale(2); 
+.doc1:hover {
+  transform: scale(1.5); 
   filter: grayscale(0%); 
 }
-
-
 
 @media (max-width: 768px) {
   .team-container {
@@ -2976,8 +2948,9 @@ strong {
 }
 
 .recomendacion-card {
-  width: 280px;
-  padding: 20px;
+  width: 180px;
+  height: auto;
+  padding: 30px;
   background-color: #ffffffb7;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -3071,13 +3044,39 @@ strong {
     transform: translateY(-3px); 
 }
 
+
+.open-popup-btn3 {
+    background: linear-gradient(45deg, #a07a5f, #a48b7f); 
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px; 
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    margin-left: 30px; 
+    display: block; 
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.open-popup-btn3 i {
+    margin-right: 10px; 
+}
+
+.open-popup-btn3:hover {
+    background: linear-gradient(45deg, #d7a48d, #726256); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+    transform: translateY(-3px); 
+}
+
 .kobo-logo {
     width: 60px; 
     height: auto;
     vertical-align: middle;
 }
 
-/*CONCLUSIONES*/
 /*CONCLUSIONES*/
 .txt-conclusiones {
   color: whitesmoke;
@@ -3105,4 +3104,8 @@ strong {
   justify-content: center;
   align-items: center;
   padding: 2rem;
+}
+
+.strong-conclusion {
+  color: #ffffff; 
 }

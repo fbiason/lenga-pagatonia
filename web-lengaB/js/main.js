@@ -614,7 +614,7 @@ document.querySelectorAll(".hallazgo-card").forEach((card) => {
 });
 
 // Selecciona el botón y el modal
-const openPopupBtn = document.querySelector(".open-popup-btn");
+const openPopupBtn = document.querySelector(".open-popup-btn3");
 const popupModal = document.getElementById("popup-modal");
 const closePopup = document.querySelector(".close-popup");
 
